@@ -1,0 +1,62 @@
+.form {
+  // &-control {
+  // }
+
+  &-select {
+    width: auto;
+    border-radius: toRem(2);
+
+    &-wf {
+      width: 100%;
+    }
+
+    &-sm {
+      padding: toRem(8) auto;
+      font-size: toRem(13);
+    }
+
+    &:hover {
+      @include boxShadow(default, $brand-primary);
+    }
+
+    &:focus {
+      @include boxShadow(md, $brand-primary);
+    }
+  }
+}
+
+@include breakpoint-up(md) {
+  .form {
+    &-select {
+      &-sm {
+      }
+    }
+  }
+}
+
+.app-form {
+  &-control {
+    width: 100%;
+    height: auto;
+    padding: toRem(10) toRem(14);
+    background: $brand-white;
+    border: 0.5px solid #969696;
+    font-size: toRem(14);
+    color: $color-dark;
+    overflow: hidden;
+    transition: border-color 0.2s ease-in-out;
+
+    &:hover {
+      border-color: $brand-primary;
+    }
+
+    &:focus-within {
+      border-color: $brand-primary;
+    }
+
+    &::placeholder {
+      font-size: toRem(14) !important;
+      color: $color-dark !important;
+    }
+  }
+}

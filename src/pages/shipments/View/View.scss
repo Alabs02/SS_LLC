@@ -1,0 +1,46 @@
+.search {
+  border: 0.7px solid $brand-secondary-light;
+  width: 100%;
+  height: toRem(50);
+
+  &__input {
+    width: 80%;
+    height: 100%;
+
+    font-size: toRem(13);
+
+    padding-right: toRem(8);
+    padding-left: toRem(8);
+  }
+
+  &__btn {
+    width: 20%;
+    height: 100%;
+  }
+}
+
+.sort-label {
+  display: none;
+}
+
+@include breakpoint-up(md) {
+  .section {
+    &--panel {
+      div:first-child {
+        width: auto;
+      }
+
+      div:last-child {
+        width: auto;
+      }
+    }
+  }
+
+  .search {
+    width: 78%;
+  }
+
+  .sort-label {
+    display: flex;
+  }
+}

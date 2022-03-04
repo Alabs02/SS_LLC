@@ -1,0 +1,229 @@
+// APPBAR COMPONENT
+.appbar {
+  background: $brand-white;
+
+  height: toRem(70);
+  width: 100%;
+  padding: toRem(16) toRem(48);
+
+  overflow: hidden;
+
+  display: none;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  &-brand {
+    width: toRem(65);
+    height: toRem(35);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &-navigation {
+    display: flex;
+    align-items: center;
+  }
+}
+
+// PAGINATION COMPONENT
+.pagination {
+  &-btn {
+    height: toRem(32);
+    width: toRem(32);
+    border-radius: toRem(4);
+    border: 1px solid #969696;
+    transition: all 0.4s ease-in-out;
+
+    display: grid;
+    place-items: center;
+
+    font-size: toRem(15);
+    background: $brand-white;
+
+    &:hover {
+      color: $brand-primary;
+      border-color: $brand-primary;
+    }
+
+    &--active {
+      color: $brand-tonic;
+      border-color: $brand-tonic;
+    }
+  }
+
+  &-item {
+    margin-right: toRem(11);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &-container {
+    display: flex;
+
+    max-width: 16%;
+    margin: 0 toRem(11);
+
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+}
+
+// BADGE COMPONENT
+.badge {
+  &-success {
+    &-outline {
+      background: #f3fff9;
+      color: darken($color: $brand-success, $amount: 2) !important;
+      border: 1px solid $brand-success;
+    }
+  }
+
+  &-gray {
+    &-outline {
+      background: $brand-gray-light;
+      color: $brand-gray-dark !important;
+      border: 1px solid $brand-gray-dark;
+    }
+  }
+
+  &-primary {
+    &-outline {
+      background: $brand-primary-inverse;
+      color: $brand-primary !important;
+      border: 1px solid $brand-primary;
+    }
+  }
+
+  &-btn {
+    border-radius: toRem(4);
+    padding: toRem(4) toRem(16);
+    font-size: toRem(12);
+    font-weight: 500;
+  }
+}
+
+// TABLE COMPONENT
+.app-table {
+  width: 100%;
+  background: $brand-white;
+  @include boxShadow(default, #000);
+
+  &__responsive {
+    overflow-x: auto;
+  }
+
+  &--primary {
+    thead {
+      background: $brand-primary;
+
+      tr {
+        th {
+          color: $color-white;
+          font-size: toRem(15);
+          font-weight: 500;
+          text-align: left;
+          padding: toRem(12) toRem(16);
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          font-size: toRem(15);
+          font-weight: 500;
+          text-align: left;
+          padding: toRem(12) toRem(16);
+        }
+
+        &:nth-child(even) {
+          background: $brand-primary-light;
+
+          &:hover {
+            background: darken($color: $brand-primary-light, $amount: 4);
+          }
+        }
+
+        &:nth-child(odd) {
+          background: $brand-white;
+
+          &:hover {
+            background: lighten($color: $brand-primary-light, $amount: 2);
+          }
+        }
+      }
+    }
+  }
+
+  &__noentity {
+    width: 100%;
+    height: auto;
+    background: $brand-white;
+    @include boxShadow(default, #000);
+  }
+}
+
+// TOP NPROGRESS
+.nprogress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+
+  height: toRem(2);
+  width: 0%;
+  background-color: $brand-tonic;
+  box-shadow: 0 0 2px 2px rgba($color: $brand-tonic, $alpha: 0.3);
+
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+
+  &__spinner {
+    position: fixed;
+    top: 2%;
+    right: 1%;
+    z-index: 50;
+
+    transform: translate(-2%, -1%);
+  }
+}
+
+.nfade {
+  &-enter {
+    opacity: 0.01;
+  }
+
+  &-enter.nfade-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+
+  &-exit {
+    opacity: 1;
+  }
+
+  &-exit.nfade-exit-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+  }
+}
+
+@include breakpoint-up(md) {
+  .appbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

@@ -1,0 +1,14 @@
+.field-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+
+  display: grid;
+  align-items: center;
+
+  &__append {
+    position: absolute;
+    right: toRem(16);
+  }
+}

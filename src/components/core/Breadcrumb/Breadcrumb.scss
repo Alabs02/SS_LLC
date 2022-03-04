@@ -1,0 +1,50 @@
+.app-breadcrumb {
+  &__divider {
+    margin-right: toRem(6);
+    margin-left: toRem(6);
+  }
+
+  &__link {
+    &--active {
+      color: $brand-tonic;
+
+      &:hover {
+        color: darken($color: $brand-tonic, $amount: 4);
+      }
+
+      &:focus {
+        color: darken($color: $brand-tonic, $amount: 4);
+      }
+    }
+
+    &--inactive {
+      color: $color-text;
+
+      &:hover {
+        color: $brand-primary;
+      }
+
+      &:focus {
+        color: $brand-primary;
+      }
+    }
+  }
+
+  &__item {
+    font-size: toRem(12);
+    color: inherit;
+  }
+}
+
+@include breakpoint-up(md) {
+  .app-breadcrumb {
+    &__divider {
+      margin-right: toRem(8);
+      margin-left: toRem(8);
+    }
+
+    &__item {
+      font-size: toRem(13);
+    }
+  }
+}

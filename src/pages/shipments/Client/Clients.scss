@@ -1,0 +1,57 @@
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: toRem(32);
+  padding-bottom: toRem(16);
+
+  &__link {
+    text-decoration: none;
+    transition: text-decoration 0.3s ease-in-out;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.searchbar {
+  width: 60%;
+  height: toRem(48);
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  &__input {
+    height: 100%;
+    border-radius: 0 !important;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: toRem(16);
+
+    transform: translateY(-50%);
+  }
+
+  &__btn {
+    height: toRem(48) !important;
+    padding-right: toRem(30) !important;
+    padding-left: toRem(30) !important;
+  }
+}
+
+.section {
+  &--searchbar {
+    display: flex;
+    align-items: center;
+  }
+
+  &--action {
+    display: flex;
+    justify-content: center;
+  }
+}

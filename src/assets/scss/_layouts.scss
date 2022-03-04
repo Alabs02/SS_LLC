@@ -1,0 +1,358 @@
+.grid {
+  display: grid;
+
+  &-rows-none {
+    grid-template-rows: none;
+  }
+
+  &-cols-none {
+    grid-template-columns: none;
+  }
+}
+
+.col {
+  &-auto {
+    grid-column: auto;
+  }
+
+  &-span-full {
+    grid-column: 1 / -1;
+  }
+}
+
+.row {
+  &-auto {
+    grid-row: auto;
+  }
+
+  &-span-full {
+    grid-row: 1 / -1;
+  }
+}
+
+.place {
+  &-items {
+    &-center {
+      place-items: center;
+    }
+
+    &-start {
+      place-items: start;
+    }
+
+    &-end {
+      place-items: end;
+    }
+
+    &-stretch {
+      place-items: stretch;
+    }
+
+    &-baseline {
+      place-items: baseline;
+    }
+
+    &-self-start {
+      place-self: start;
+    }
+
+    &-self-end {
+      place-self: end;
+    }
+
+    &-self-center {
+      place-self: center;
+    }
+
+    &-self-stretch {
+      place-self: stretch;
+    }
+
+    &-self-baseline {
+      place-self: baseline;
+    }
+  }
+
+  &-content {
+    &-center {
+      place-content: center;
+    }
+
+    &-start {
+      place-content: start;
+    }
+
+    &-end {
+      place-content: end;
+    }
+
+    &-stretch {
+      place-content: stretch;
+    }
+
+    &-around {
+      place-content: around;
+    }
+
+    &-between {
+      place-content: between;
+    }
+
+    &-evenly {
+      place-content: evenly;
+    }
+  }
+}
+
+$cols: 50;
+$rowMax: 45;
+
+@for $col from 1 through $cols {
+  .grid {
+    &-col-#{$col} {
+      grid-template-columns: repeat($col, minmax(0, 1fr));
+    }
+
+    &-rows-#{$col} {
+      grid-template-rows: repeat($col, minmax(0, 1fr));
+    }
+  }
+
+  .col-span-#{$col} {
+    grid-column: span $col / span $col;
+  }
+
+  @if ($col <= $rowMax) {
+    .row-span-#{$col} {
+      grid-row: span $col / span $col;
+    }
+  }
+}
+
+// DASHBOARD LAYOUT
+
+.dashboard-layout {
+  @extend .grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 80vh;
+
+  &__drawer {
+    display: none;
+  }
+
+  &__content {
+    grid-column: span 12 / span 12;
+    padding-right: toRem(20);
+    padding-left: toRem(20);
+  }
+}
+
+@include breakpoint-up(md) {
+  .dashboard-layout {
+    &__drawer {
+      display: grid;
+      grid-column: span 2 / span 2;
+    }
+
+    &__content {
+      grid-column: span 10 / span 10;
+      padding-right: toRem(20);
+      padding-left: toRem(20);
+    }
+  }
+}
+
+// AUTH LAYOUT
+.auth-layout {
+  min-height: 95vh;
+  padding: 0 toRem(20);
+
+  display: grid;
+  place-items: center;
+
+  &__heading {
+    font-size: toRem(24);
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: toRem(40);
+    color: $color-text;
+    font-family: 'Averia Serif Libre', cursive !important;
+  }
+
+  &__subheading {
+    font-size: toRem(12);
+    color: $color-text;
+    line-height: toRem(16);
+    text-align: center;
+  }
+
+  &__container {
+    width: 100%;
+    min-height: toRem(408);
+    background: $brand-white;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: toRem(40);
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(202, 200, 218, 0.5);
+    @include boxShadow(xs, #000);
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: toRem(1);
+      left: toRem(-1);
+      overflow: hidden;
+
+      height: toRem(90);
+      width: toRem(90);
+
+      @include auth-top-left();
+      background-repeat: no-repeat !important;
+      background-position: top left !important;
+      background-size: contain !important;
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      right: toRem(-5);
+      bottom: toRem(-42);
+      overflow: hidden;
+
+      height: toRem(90);
+      width: toRem(90);
+
+      @include auth-bottom-right();
+      background-repeat: no-repeat !important;
+      background-position: top left !important;
+      background-size: contain !important;
+    }
+  }
+
+  &__ornament {
+    height: toRem(26);
+    width: toRem(42);
+
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    transform: translate(-10% -5%);
+    overflow: hidden;
+
+    @include auth-ornament();
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: contain !important;
+  }
+
+  &__content {
+    width: 100%;
+    padding: toRem(16);
+    overflow: hidden;
+
+    display: grid;
+    place-items: center;
+
+    // border: 1px solid red;
+  }
+
+  &__btn {
+    width: 50%;
+  }
+
+  &__link {
+    color: $brand-tonic !important;
+    font-size: toRem(13);
+    font-weight: 500;
+    letter-spacing: 0.1pt;
+    line-height: toRem(16);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__text {
+    font-size: toRem(13);
+    font-weight: 500;
+    letter-spacing: 0.1pt;
+    line-height: toRem(16);
+  }
+}
+
+@include breakpoint-up(md) {
+  @for $col from 1 through $cols {
+    .grid {
+      &-col-md-#{$col} {
+        grid-template-columns: repeat($col, minmax(0, 1fr));
+      }
+
+      &-rows-md-#{$col} {
+        grid-template-rows: repeat($col, minmax(0, 1fr));
+      }
+    }
+
+    .col-span-md-#{$col} {
+      grid-column: span $col / span $col;
+    }
+
+    @if ($col <= $rowMax) {
+      .row-span-md-#{$col} {
+        grid-row: span $col / span $col;
+      }
+    }
+  }
+
+  .auth-layout {
+    padding: 0;
+
+    &__heading {
+      font-size: toRem(32);
+    }
+
+    &__subheading {
+      font-size: toRem(13);
+    }
+
+    &__container {
+      width: 65%;
+      margin-bottom: toRem(10);
+
+      &::before {
+        content: '';
+
+        top: 0;
+        left: toRem(-2);
+
+        height: toRem(125);
+        width: toRem(160);
+      }
+
+      &::after {
+        right: toRem(-5);
+        bottom: toRem(-22);
+
+        height: toRem(125);
+        width: toRem(160);
+      }
+    }
+
+    &__content {
+      width: 55%;
+      padding: toRem(24) 0;
+    }
+
+    &__ornament {
+      height: toRem(46);
+      width: toRem(76);
+    }
+  }
+}
