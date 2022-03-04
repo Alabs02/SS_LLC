@@ -1,5 +1,6 @@
 import { FC, Fragment } from "react";
 import { HiMenu } from "react-icons/hi";
+import { NavLink } from "react-router-dom";
 import "./ShipmentToolBar.scss";
 
 const ShipmentToolBar: FC = () => {
@@ -12,7 +13,9 @@ const ShipmentToolBar: FC = () => {
             <img src="/static/logo.svg" alt="brand-logo" />
           </div>
         </div>
+        <NavLink to="">
         <button className="btn btn-tonic">Create a new shipment</button>
+        </NavLink>
       </div>
     </Fragment>
   );

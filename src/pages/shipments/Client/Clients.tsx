@@ -6,6 +6,7 @@ import { RiSearchLine } from "react-icons/ri";
 import useStore from "../../../store";
 
 import { ClientCard, Breadcrumb } from "../../../components/core";
+import { NavLink } from "react-router-dom";
 
 export type IState = {
   userPayload: () => {},
@@ -76,9 +77,11 @@ const Clients = () => {
         </section>
 
         <section className="section section--action w-full mst-32">
+          <NavLink to="/shipments/clients/register">
           <button className="btn btn-tonic btn-lg">
             Register a new client
           </button>
+          </NavLink>
         </section>
     </Fragment>
   );

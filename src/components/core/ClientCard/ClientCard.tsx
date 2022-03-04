@@ -2,6 +2,7 @@
 import "./ClientCard.scss";
 
 import { Fragment } from "react";
+import { NavLink } from "react-router-dom";
 
 const ClientCard = () => {
   return (
@@ -18,7 +19,9 @@ const ClientCard = () => {
             </div>
           </div>
 
+          <NavLink to="/shipments/clients/edit/:client">
           <button className="btn-primary-flat client-card__btn">Edit</button>
+          </NavLink>
         </div>
     </Fragment>
   );
