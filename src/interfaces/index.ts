@@ -1,12 +1,7 @@
+// ENUMS
+export { ROLE } from "./roles";
 
-import * as AppFooterInterfaces from "./footerInterfaces";
-import { ROLE } from "./roles";
-import { IUserPayload } from "./authInterface";
-
-type AppFooterLink = AppFooterInterfaces.AppFooterLink;
-
-export type {
-  AppFooterLink,
-  IUserPayload,
-};
-export { ROLE };
+// INTEFACES
+export type { AppFooterLink } from "./footer-interfaces";
+export type { IUserPayload } from "./auth-interface";
+export type { IChildren, ICover } from "./modal-interface";
