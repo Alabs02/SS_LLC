@@ -1,10 +1,5 @@
-import NoEntity from "./NoEntity/NoEntity";
-import Breadcrumb from "./Breadcrumb/Breadcrumb";
-import LoadingBtn from "./LoadingBtn/LoadingBtn";
-import ClientCard from "./ClientCard";
-export {
-  NoEntity,
-  Breadcrumb,
-  LoadingBtn,
-  ClientCard,
-};
+export { default as NoEntity } from "./NoEntity/NoEntity";
+export { default as Breadcrumb } from "./Breadcrumb/Breadcrumb";
+export { default as ClientCard } from "./ClientCard/ClientCard";
+export { default as LoadingBtn } from "./LoadingBtn/LoadingBtn";
+export { default as Modal } from "./Modal/Modal";

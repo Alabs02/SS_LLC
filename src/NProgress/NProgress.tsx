@@ -5,7 +5,7 @@ import gsap, { Power2 } from "gsap";
 import { on } from "../Events";
 
 const timeline = gsap.timeline();
-const nprogressRoot = document.getElementById("nprogress") as HTMLElement;
+const nprogressRoot = document.getElementById("nprogress-root") as HTMLElement;
 
 
 const NProgress = () => {

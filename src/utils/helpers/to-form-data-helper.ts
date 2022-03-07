@@ -3,4 +3,4 @@ const toFormData = (object: Object | any) => Object.keys(object).reduce((formDat
   return formData;
 }, new FormData());
 
-export default toFormData;
+export { toFormData as default };

@@ -16,7 +16,7 @@ Render(
       <Toast />
       <NProgress />
   </StrictMode>,
-  document.getElementById('root')
+  document.getElementById('app-root')
 );
 const isProd = process.env.NODE_ENV === 'production';
 !isProd && reportWebVitals(console.log);
