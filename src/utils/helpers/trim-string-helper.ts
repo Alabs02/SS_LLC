@@ -8,4 +8,4 @@ const trimString = (str: string, maxLength: number, ellipses: boolean): string =
   }
 }
 
-export default trimString;
+export { trimString as default };

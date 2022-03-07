@@ -16,5 +16,4 @@ export {
   // TOOLBARS
   ShipmentToolBar,
   MobileToolbar,
-
 };
