@@ -2,7 +2,7 @@ import { Route } from "react-router-dom";
 
 // LAYOUT
 import { DashboardLayout } from "../../layouts";
-
+import { FalseTest } from "../../pages/false";
 // PAGES
 import {
   Shipments,
@@ -31,7 +31,7 @@ const ShipmentRoutes = () => {
       <Route path="clients/edit/:clientId" element={<EditClient />}></Route>
       <Route path="recipient/edit/:recipientId" element={<EditRecipient />}></Route>
       <Route path="recipient/register" element={<RegisterRecipient />}></Route>
-
+      <Route path="false" element={<FalseTest/>}></Route>
     </Route>
   );
 };
