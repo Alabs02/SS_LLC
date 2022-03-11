@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react";
 import { Modal } from "../../../components/core";
 
+
 const FalseTest = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -26,6 +27,7 @@ const FalseTest = () => {
       <div className="grid place-items-center w-full h-full">
         <h4 className="mst-50">False Entry</h4>
         <button onClick={() => setIsOpen(true)} className="btn btn-success text-capitalize">test modal</button>
+        
       </div>
     </Fragment>
   );

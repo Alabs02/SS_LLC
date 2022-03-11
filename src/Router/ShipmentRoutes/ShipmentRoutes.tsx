@@ -16,6 +16,9 @@ import {
 
 // AUTH MIDDLEWARE
 import { RequireAuth } from "../../middlewares";
+import SuccessModal from "../../components/modals/SuccessModal/SuccessModal";
+import SuccessModalTwo from "../../components/modals/SuccessModalTwo/SuccessModalTwo";
+import CategoryModal from "../../components/modals/CategoryModal/CategoryModal";
 
 const ShipmentRoutes = () => {
   return (
@@ -32,6 +35,9 @@ const ShipmentRoutes = () => {
       <Route path="recipient/edit/:recipientId" element={<EditRecipient />}></Route>
       <Route path="recipient/register" element={<RegisterRecipient />}></Route>
       <Route path="false" element={<FalseTest/>}></Route>
+      <Route path="smodal1" element={<SuccessModal/>}></Route>
+      <Route path="smodal2" element={<SuccessModalTwo/>}></Route>
+      <Route path="catmodal" element={<CategoryModal/>}></Route>
     </Route>
   );
 };

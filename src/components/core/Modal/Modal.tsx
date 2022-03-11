@@ -38,7 +38,7 @@ class Modal extends Component {
             <div className="app-modal__cover animate__animated animate__zoomIn app-modal__cover-delay round-2">
               <div className="app-modal__header">
                 {isValidStr(props.modalTitle) && (
-                  <div className="app-modal__title fw-medium text-capitalize">{props.modalTitle}</div>
+                  <div className="app-modal__title justify-content-center fw-medium text-capitalize">{props.modalTitle}</div>
                 )}
 
                 {props.showCloseBtn && (
@@ -61,6 +61,7 @@ class Modal extends Component {
     <Fragment>
       <div className="app-modal__content">
         {props.children}
+
       </div>
     </Fragment>
   );
