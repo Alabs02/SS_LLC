@@ -12,6 +12,7 @@ import {
   EditClient,
   RegisterRecipient,
   EditRecipient,
+  TrackShipment,
 } from "../../pages/shipments";
 
 // AUTH MIDDLEWARE
@@ -42,6 +43,7 @@ const ShipmentRoutes = () => {
       <Route path="catmodal" element={<CategoryModal/>}></Route>
       <Route path="create-shipment" element={<CreateShipment/>}></Route>
       <Route path="add-item" element={<AddItems/>}></Route>
+      <Route path="track-shipment" element={<TrackShipment />}></Route>
 
     </Route>
   );

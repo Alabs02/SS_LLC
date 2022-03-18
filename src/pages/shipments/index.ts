@@ -5,6 +5,7 @@ import EditClient from "./EditClient/EditClient";
 import EditRecipient from "./EditRecipient/EditRecipient";
 import RegisterClient from "./RegisterClient/RegisterClient";
 import RegisterRecipient from "./RegisterRecipient/RegisterRecipient";
+import TrackShipment from "./TrackShipment/TrackShipment";
 
 export {
   Shipments,
@@ -14,4 +15,5 @@ export {
   EditRecipient,
   RegisterClient,
   RegisterRecipient,
+  TrackShipment,
 };

@@ -127,7 +127,7 @@ const AddItems = () => {
                             Dimensions (cm)
                         </label>
                         <div className="grid grid-col-12 gap-x-48 w-full">
-                            <div className="col-span-12 col-span-md-4 gap-x-46 msb-24">
+                            <div className="col-span-12 col-span-md-3 gap-x-46 msb-24">
                                 <input 
                                 type="text" 
                                 name="item__length" 
@@ -136,7 +136,7 @@ const AddItems = () => {
                                 />
 
                             </div>
-                            <div className="col-span-12 col-span-md-4 gap-x-46 msb-24">
+                            <div className="col-span-12 col-span-md-3 gap-x-46 msb-24">
                                 <input
                                 type="text"
                                 name="item__width"
@@ -144,7 +144,7 @@ const AddItems = () => {
                                 placeholder={'Width'}
                                 />
                             </div>
-                            <div className="col-span-12 col-span-md-4 gap-x-46 msb-24">
+                            <div className="col-span-12 col-span-md-3 gap-x-46 msb-24">
                                 <input
                                 type="text"
                                 name="item__height" 
