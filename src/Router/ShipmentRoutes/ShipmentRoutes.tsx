@@ -20,6 +20,7 @@ import SuccessModal from "../../components/modals/SuccessModal/SuccessModal";
 import SuccessModalTwo from "../../components/modals/SuccessModalTwo/SuccessModalTwo";
 import CategoryModal from "../../components/modals/CategoryModal/CategoryModal";
 import CreateShipment from "../../pages/false/forms/CreateShipment";
+import AddItems from "../../pages/false/forms/AddItems";
 
 const ShipmentRoutes = () => {
   return (
@@ -40,6 +41,7 @@ const ShipmentRoutes = () => {
       <Route path="smodal2" element={<SuccessModalTwo/>}></Route>
       <Route path="catmodal" element={<CategoryModal/>}></Route>
       <Route path="create-shipment" element={<CreateShipment/>}></Route>
+      <Route path="add-item" element={<AddItems/>}></Route>
 
     </Route>
   );
