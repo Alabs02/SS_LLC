@@ -19,6 +19,7 @@ import { RequireAuth } from "../../middlewares";
 import SuccessModal from "../../components/modals/SuccessModal/SuccessModal";
 import SuccessModalTwo from "../../components/modals/SuccessModalTwo/SuccessModalTwo";
 import CategoryModal from "../../components/modals/CategoryModal/CategoryModal";
+import CreateShipment from "../../pages/false/forms/CreateShipment";
 
 const ShipmentRoutes = () => {
   return (
@@ -38,6 +39,8 @@ const ShipmentRoutes = () => {
       <Route path="smodal1" element={<SuccessModal/>}></Route>
       <Route path="smodal2" element={<SuccessModalTwo/>}></Route>
       <Route path="catmodal" element={<CategoryModal/>}></Route>
+      <Route path="create-shipment" element={<CreateShipment/>}></Route>
+
     </Route>
   );
 };

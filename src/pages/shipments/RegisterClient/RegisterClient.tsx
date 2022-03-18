@@ -11,7 +11,7 @@ const RegisterClient = () => {
       title: "Shipments"
     },
     {
-      to: "/shipments/Clients",
+      to: "/shipments/clients",
       title: "Clients"
     },
     {
