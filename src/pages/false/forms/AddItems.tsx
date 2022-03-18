@@ -200,6 +200,9 @@ const AddItems = () => {
                             <option value="">Home Pickup</option>
                         </select>
                     </div>
+                    <div className="d-flex align-items-end justify-content-">
+                        <button className='btn btn-primary bt-md'>+ Add Another Item</button>
+                    </div>
                 </div>
             </div>
         </div>
