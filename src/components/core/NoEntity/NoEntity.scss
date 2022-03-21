@@ -1,0 +1,40 @@
+.no-entity {
+  min-height: toRem(300);
+  width: 100%;
+  background: $brand-white;
+
+  &__media {
+    height: toRem(154);
+    width: toRem(226);
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__subheading {
+    color: $brand-gray-dark;
+  }
+}
+
+@include breakpoint-up(md) {
+  .no-entity {
+    min-height: toRem(400);
+    width: 100%;
+    background: $brand-white;
+
+    &__media {
+      height: toRem(204);
+      width: toRem(276);
+    }
+  }
+}

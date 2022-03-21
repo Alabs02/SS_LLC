@@ -1,0 +1,509 @@
+.hidden {
+  display: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.subpixel-antialiased {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
+.fw {
+  &-light {
+    font-weight: 300;
+    @extend .subpixel-antialiased;
+  }
+
+  &-normal {
+    font-weight: 400;
+    @extend .subpixel-antialiased;
+  }
+
+  &-medium {
+    font-weight: 500;
+    @extend .subpixel-antialiased;
+  }
+
+  &-semi-bold {
+    font-weight: 600;
+    @extend .subpixel-antialiased;
+  }
+
+  &-bold {
+    font-weight: 700;
+    @extend .subpixel-antialiased;
+  }
+
+  &-bolder {
+    font-weight: 800;
+    @extend .subpixel-antialiased;
+  }
+}
+
+.app-text {
+  &-dark {
+    color: $color-dark;
+  }
+
+  &-default {
+    color: $color-text;
+  }
+
+  &-white {
+    color: $color-white;
+  }
+
+  &-primary {
+    color: $brand-primary !important;
+
+    &-inverse {
+      color: $brand-primary-inverse !important;
+    }
+
+    &-light {
+      color: $brand-primary-light !important;
+    }
+  }
+
+  &-secondary {
+    color: $brand-secondary !important;
+
+    &-light {
+      color: $brand-secondary-light !important;
+    }
+  }
+
+  &-gray {
+    color: $brand-gray !important;
+
+    &-dark {
+      color: $brand-gray-dark !important;
+    }
+
+    &-darker {
+      color: $brand-gray-darker !important;
+    }
+
+    &-light {
+      color: $brand-gray-light !important;
+    }
+  }
+
+  &-tonic {
+    color: $brand-tonic !important;
+
+    &-inverse {
+      color: $brand-tonic-inverse !important;
+    }
+
+    &-pale {
+      color: $brand-tonic-pale !important;
+    }
+
+    &-light {
+      color: $brand-tonic-light !important;
+    }
+
+    &-lighter {
+      color: $brand-tonic-lighter !important;
+    }
+  }
+
+  &-success {
+    color: $brand-success !important;
+
+    &-dark {
+      color: $brand-success-dark !important;
+    }
+
+    &-darker {
+      color: $brand-success-darker !important;
+    }
+
+    &-light {
+      color: $brand-success-light !important;
+    }
+  }
+}
+
+.app-bg {
+  &-dark {
+    background: $color-dark;
+  }
+
+  &-white {
+    background: $color-white;
+  }
+
+  &- &-primary {
+    background: $brand-primary !important;
+
+    &-inverse {
+      background: $brand-primary-inverse !important;
+    }
+
+    &-light {
+      background: $brand-primary-light !important;
+    }
+  }
+
+  &-secondary {
+    background: $brand-secondary !important;
+
+    &-light {
+      background: $brand-secondary-light !important;
+    }
+  }
+
+  &-gray {
+    background: $brand-gray !important;
+
+    &-dark {
+      background: $brand-gray-dark !important;
+    }
+
+    &-darker {
+      background: $brand-gray-darker !important;
+    }
+
+    &-light {
+      background: $brand-gray-light !important;
+    }
+  }
+
+  &-tonic {
+    background: $brand-tonic !important;
+
+    &-inverse {
+      background: $brand-tonic-inverse !important;
+    }
+
+    &-pale {
+      background: $brand-tonic-pale !important;
+    }
+
+    &-light {
+      background: $brand-tonic-light !important;
+    }
+
+    &-lighter {
+      background: $brand-tonic-lighter !important;
+    }
+  }
+
+  &-success {
+    background: $brand-success !important;
+
+    &-dark {
+      background: $brand-success-dark !important;
+    }
+
+    &-darker {
+      background: $brand-success-darker !important;
+    }
+
+    &-light {
+      background: $brand-success-light !important;
+    }
+  }
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.h {
+  &-full {
+    height: 100%;
+  }
+
+  &-auto {
+    height: auto;
+  }
+
+  &-screen {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+}
+
+.w {
+  &-full {
+    width: 100%;
+  }
+
+  &-screen {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  @media only screen and (min-width: 576px) {
+    .w-sm-full {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    &-md-full {
+      width: 100%;
+    }
+
+    &-md-auto {
+      width: auto !important;
+    }
+
+    &-md-50 {
+      width: 50% !important;
+    }
+
+    &-md-40 {
+      width: 40% !important;
+    }
+
+    &-md-35 {
+      width: 35% !important;
+    }
+
+    &-md-30 {
+      width: 30% !important;
+    }
+  }
+}
+
+.min {
+  &-h-full {
+    min-height: 100%;
+  }
+
+  &-w-full {
+    min-width: 100%;
+  }
+}
+
+.max {
+  &-h-full {
+    max-height: 100%;
+  }
+
+  &-w-full {
+    max-width: 100%;
+  }
+}
+
+.google {
+  &-red {
+    color: $google-red !important;
+  }
+
+  &-blue {
+    color: $google-blue !important;
+  }
+
+  &-green {
+    color: $google-green !important;
+  }
+
+  &-yellow {
+    color: $google-yellow !important;
+  }
+
+  &-spacing {
+    letter-spacing: 0pt;
+  }
+}
+
+.app-card {
+  &-flat {
+    border-radius: toRem(2);
+    background: $brand-white;
+    padding: toRem(24);
+
+    width: 100%;
+    height: 100%;
+  }
+}
+
+$size: 100;
+@for $n from 0 through $size {
+  .ft-#{$n} {
+    font-size: toRem($n) !important;
+  }
+
+  .lh-#{$n} {
+    line-height: toRem($n) !important;
+  }
+
+  .round-#{$n} {
+    border-radius: toRem($n) !important;
+  }
+
+  .ps {
+    &-#{$n} {
+      padding: toRem($n) !important;
+    }
+
+    &t-#{$n} {
+      padding-top: toRem($n) !important;
+    }
+
+    &r-#{$n} {
+      padding-right: toRem($n) !important;
+    }
+
+    &l-#{$n} {
+      padding-left: toRem($n) !important;
+    }
+
+    &b-#{$n} {
+      padding-bottom: toRem($n) !important;
+    }
+
+    &x-#{$n} {
+      padding-left: toRem($n) !important;
+      padding-right: toRem($n) !important;
+    }
+
+    &y-#{$n} {
+      padding-top: toRem($n) !important;
+      padding-bottom: toRem($n) !important;
+    }
+  }
+
+  .ms {
+    &-#{$n} {
+      margin: toRem($n) !important;
+    }
+
+    &t-#{$n} {
+      margin-top: toRem($n) !important;
+    }
+
+    &r-#{$n} {
+      margin-right: toRem($n) !important;
+    }
+
+    &l-#{$n} {
+      margin-left: toRem($n) !important;
+    }
+
+    &b-#{$n} {
+      margin-bottom: toRem($n) !important;
+    }
+
+    &x-#{$n} {
+      margin-left: toRem($n) !important;
+      margin-right: toRem($n) !important;
+    }
+
+    &y-#{$n} {
+      margin-top: toRem($n) !important;
+      margin-bottom: toRem($n) !important;
+    }
+  }
+
+  .gap {
+    &-#{$n} {
+      gap: toRem($n) !important;
+    }
+
+    &-x-#{$n} {
+      column-gap: toRem($n) !important;
+    }
+
+    &-y-#{$n} {
+      row-gap: toRem($n) !important;
+    }
+  }
+}
+
+@include breakpoint-up(md) {
+  @for $n from 0 through $size {
+    .ps {
+      &-md-#{$n} {
+        padding: toRem($n) !important;
+      }
+
+      &t-md-#{$n} {
+        padding-top: toRem($n) !important;
+      }
+
+      &r-md-#{$n} {
+        padding-right: toRem($n) !important;
+      }
+
+      &l-md-#{$n} {
+        padding-left: toRem($n) !important;
+      }
+
+      &b-md-#{$n} {
+        padding-bottom: toRem($n) !important;
+      }
+
+      &x-md-#{$n} {
+        padding-left: toRem($n) !important;
+        padding-right: toRem($n) !important;
+      }
+
+      &y-md-#{$n} {
+        padding-top: toRem($n) !important;
+        padding-bottom: toRem($n) !important;
+      }
+    }
+
+    .ms {
+      &-md-#{$n} {
+        margin: toRem($n) !important;
+      }
+
+      &t-md-#{$n} {
+        margin-top: toRem($n) !important;
+      }
+
+      &r-md-#{$n} {
+        margin-right: toRem($n) !important;
+      }
+
+      &l-md-#{$n} {
+        margin-left: toRem($n) !important;
+      }
+
+      &b-md-#{$n} {
+        margin-bottom: toRem($n) !important;
+      }
+
+      &x-md-#{$n} {
+        margin-left: toRem($n) !important;
+        margin-right: toRem($n) !important;
+      }
+
+      &y-md-#{$n} {
+        margin-top: toRem($n) !important;
+        margin-bottom: toRem($n) !important;
+      }
+    }
+
+    .gap {
+      &-md-#{$n} {
+        gap: toRem($n) !important;
+      }
+
+      &-x-md-#{$n} {
+        column-gap: toRem($n) !important;
+      }
+
+      &-y-md-#{$n} {
+        row-gap: toRem($n) !important;
+      }
+    }
+  }
+}

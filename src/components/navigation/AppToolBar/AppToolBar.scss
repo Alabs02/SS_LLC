@@ -1,0 +1,105 @@
+.app-toolbar {
+  background: transparent;
+
+  height: toRem(70);
+  width: 100%;
+  padding: toRem(20);
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-brand {
+    width: toRem(65);
+    height: toRem(35);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &-spacer {
+    display: none;
+    width: 10%;
+  }
+
+  &-navigation {
+    display: none;
+
+    width: 60%;
+  }
+
+  &--active {
+    color: $brand-tonic;
+
+    &:hover {
+      color: lighten($color: $brand-tonic, $amount: 5);
+    }
+
+    &:focus {
+      color: lighten($color: $brand-tonic, $amount: 5);
+    }
+  }
+
+  &--inactive {
+    color: $color-text;
+
+    &:hover {
+      color: $brand-primary;
+    }
+
+    &:focus {
+      color: $brand-primary;
+    }
+  }
+
+  &-copy {
+    font-size: toRem(16);
+    line-height: toRem(24);
+    color: inherit;
+    padding: 0 toRem(10);
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 980px) {
+  .app-toolbar {
+    &-spacer {
+      width: 4%;
+    }
+
+    &-navigation {
+      width: 95%;
+    }
+  }
+}
+
+@include breakpoint-up(md) {
+  .app-toolbar {
+    background: $brand-white;
+    padding: toRem(16) toRem(48);
+
+    justify-content: flex-start;
+
+    &-spacer {
+      display: flex;
+    }
+
+    &-navigation {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-menu {
+      display: none;
+    }
+
+    &__copy {
+      padding: 0 toRem(20);
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.more-btn {
+  color: $brand-secondary;
+  background: $brand-white;
+  height: toRem(32);
+  width: toRem(32);
+  border-radius: 50%;
+
+  &:hover {
+    color: $color-white;
+    background: $brand-primary;
+  }
+}
+
+@include breakpoint-up(md) {
+  .hidden {
+    display: none !important;
+
+    &-md {
+      display: none !important;
+    }
+  }
+}
+
+@include breakpoint-down(sm) {
+  .hidden {
+    display: none !important;
+
+    &-sm {
+      display: none !important;
+    }
+  }
+}
