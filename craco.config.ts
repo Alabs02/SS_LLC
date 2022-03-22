@@ -13,8 +13,9 @@ const host = process.env.HOST || "localhost";
 
 module.exports = {
   mode: "develpoment",
+  basePath: "/ui/staff",
+  publicPath: "/ui/staff",
   webpack: {
-    publicPath: "/ui/staff",
     alias: {
       '@': resolveAppPath('src'),
       '@layouts': path.resolve(__dirname, 'src/layouts'),
