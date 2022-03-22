@@ -8,7 +8,7 @@ import MainRoutes from "./MainRoutes";
 
 const Router = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/ui/staff">
       <Routes>
         {ShipmentRoutes()} {/* SHIPMENT ROUTES */}
         {AuthRoutes()}  {/* AUTH ROUTES */}
