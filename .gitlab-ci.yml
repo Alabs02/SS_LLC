@@ -1,0 +1,28 @@
+stages:
+ - build
+ - deploy
+docker-build:
+  # Use the official docker image.
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  before_script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+  script:
+    - DEPLOY_TAG=${DOCKER_CI_REGISTRY_IMAGE}${CI_PROJECT_NAME}
+    - DEPLOY_TAG=$(echo $DEPLOY_TAG | tr '[:upper:]' '[:lower:]')
+    - docker build --pull -t $DEPLOY_TAG:latest .
+    - docker push $DEPLOY_TAG:latest
+
+kube-deploy:
+  image: 
+    name: bitnami/kubectl:latest
+    entrypoint: [""]
+  stage: deploy
+  script:
+    #- echo $SSAF_STAGING_KUBECONFIG > ./ssaf-staging-kubeconfig.yaml
+    - kubectl --kubeconfig="ssaf-staging-kubeconfig.yaml" rollout restart deployment ${CI_PROJECT_NAME}-deployment
+    - echo you can access this service at http://developer.ssafllc.com
+
+   
