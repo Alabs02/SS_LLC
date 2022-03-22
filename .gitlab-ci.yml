@@ -22,7 +22,8 @@ kube-deploy:
   stage: deploy
   script:
     #- echo $SSAF_STAGING_KUBECONFIG > ./ssaf-staging-kubeconfig.yaml
-    - kubectl --kubeconfig="ssaf-staging-kubeconfig.yaml" rollout restart deployment ${CI_PROJECT_NAME}-deployment
+    # - kubectl --kubeconfig="ssaf-staging-kubeconfig.yaml" rollout restart deployment ${CI_PROJECT_NAME}-deployment
+    - kubectl --kubeconfig=$SSAF_DIGITAL_OCEAN_K8S_CONFIG rollout restart deployment ${CI_PROJECT_NAME}-deployment
     - echo you can access this service at http://developer.ssafllc.com
 
    
