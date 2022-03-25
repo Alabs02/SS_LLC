@@ -2,7 +2,7 @@
 import "./AppDrawer.scss";
 
 // @TYPES
-import { DrawerRoute } from "../../../@types";
+import { DrawerRoute } from "src/@types";
 
 import { Fragment } from "react";
 import { NavLink } from "react-router-dom";

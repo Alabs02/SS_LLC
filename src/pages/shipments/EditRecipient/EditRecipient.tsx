@@ -1,6 +1,6 @@
 import { Fragment } from "react";
-import { Breadcrumb } from "../../../components/core";
-import { MobileToolbar } from "../../../components/navigation";
+import { Breadcrumb } from "src/components/core";
+import { MobileToolbar } from "src/components/navigation";
 
 const EditRecipient = () => {
 

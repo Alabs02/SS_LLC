@@ -2,7 +2,7 @@
 import "./AppFooter.scss";
 
 import { Fragment } from "react";
-import { AppFooterLink as IAppFooterLink } from "../../../interfaces";
+import { AppFooterLink as IAppFooterLink } from "src/interfaces";
 import { BsFacebook, BsTwitter, BsLinkedin } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 
@@ -101,7 +101,7 @@ const AppFooter = () => {
           <div className="app-footer__location msb-32 msb-md-0">
             <p className="m-0 ft-15 lh-24 fw-normal msb-5">Find us here</p>
             <div className="app-footer__media">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7927.131392538702!2d3.361514825976664!3d6.576364139238405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9271ea07192b%3A0xeb61868a07fcf71c!2sMaryland%20101233%2C%20Ikeja!5e0!3m2!1sen!2sng!4v1644763422710!5m2!1sen!2sng" width={'100%'} height={199} style={{border: 0}} allowFullScreen loading="lazy" />
+              <iframe title="google_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7927.131392538702!2d3.361514825976664!3d6.576364139238405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9271ea07192b%3A0xeb61868a07fcf71c!2sMaryland%20101233%2C%20Ikeja!5e0!3m2!1sen!2sng!4v1644763422710!5m2!1sen!2sng" width={'100%'} height={199} style={{border: 0}} allowFullScreen loading="lazy" />
             </div>
             <p className="ft-12 lh-16 fw-medium mst-4">powered by
               <span className="msl-4 google-spacing text-uppercase ft-12 fw-semi-bold">

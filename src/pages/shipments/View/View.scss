@@ -23,6 +23,12 @@
   display: none;
 }
 
+// .table {
+//   &__row {
+    
+//   }
+// }
+
 @include breakpoint-up(md) {
   .section {
     &--panel {

@@ -1,8 +1,8 @@
 import { Route } from "react-router-dom";
 
 // LAYOUT
-import { DashboardLayout } from "../../layouts";
-import { FalseTest } from "../../pages/false";
+import { DashboardLayout } from "src/layouts";
+import { FalseTest } from "src/pages/false";
 // PAGES
 import {
   Shipments,
@@ -13,15 +13,15 @@ import {
   RegisterRecipient,
   EditRecipient,
   TrackShipment,
-} from "../../pages/shipments";
+} from "src/pages/shipments";
 
 // AUTH MIDDLEWARE
-import { RequireAuth } from "../../middlewares";
-import SuccessModal from "../../components/modals/SuccessModal/SuccessModal";
-import SuccessModalTwo from "../../components/modals/SuccessModalTwo/SuccessModalTwo";
-import CategoryModal from "../../components/modals/CategoryModal/CategoryModal";
-import CreateShipment from "../../pages/false/forms/CreateShipment";
-import AddItems from "../../pages/false/forms/AddItems";
+import { RequireAuth } from "src/middlewares";
+import SuccessModal from "src/components/modals/SuccessModal/SuccessModal";
+import SuccessModalTwo from "src/components/modals/SuccessModalTwo/SuccessModalTwo";
+import CategoryModal from "src/components/modals/CategoryModal/CategoryModal";
+import CreateShipment from "src/pages/false/forms/CreateShipment";
+import AddItems from "src/pages/false/forms/AddItems";
 
 const ShipmentRoutes = () => {
   return (

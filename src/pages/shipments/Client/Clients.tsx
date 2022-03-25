@@ -3,9 +3,9 @@ import "./Clients.scss";
 
 import { Fragment, useEffect } from "react";
 import { RiSearchLine } from "react-icons/ri";
-import useStore from "../../../store";
+import useStore from "src/store";
 
-import { ClientCard, Breadcrumb } from "../../../components/core";
+import { ClientCard, Breadcrumb } from "src/components/core";
 import { NavLink } from "react-router-dom";
 
 export type IState = {

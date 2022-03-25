@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 import {
   AppToolBar,
   AppFooter,
-} from "../../components/navigation";
+} from "src/components/navigation";
 
 const AuthLayout: FC = () => {
   return (

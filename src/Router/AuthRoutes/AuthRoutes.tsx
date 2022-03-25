@@ -1,13 +1,13 @@
 import { Route } from "react-router-dom";
 
 // LAYOUT
-import { AuthLayout } from "../../layouts"
+import { AuthLayout } from "src/layouts"
 
 // PAGES
 import {
   Signin,
   ForgotPassword,
-} from  "../../pages/auth";
+} from  "src/pages/auth";
 
 const AuthRoutes = () => {
   return (

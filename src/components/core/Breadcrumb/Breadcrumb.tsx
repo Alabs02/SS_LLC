@@ -4,7 +4,7 @@ import "./Breadcrumb.scss";
 import { Fragment } from "react";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
-import { IBreadcrumbItem } from "../../../@types";
+import { IBreadcrumbItem } from "src/@types";
 
 export type IBreadcrumbItems = Array<IBreadcrumbItem>;
 

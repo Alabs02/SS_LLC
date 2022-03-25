@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import { Modal } from "../../../components/core";
+import { Modal } from "src/components/core";
 
 
 const FalseTest = () => {

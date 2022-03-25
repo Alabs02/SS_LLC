@@ -2,14 +2,14 @@ import { Fragment, FC } from "react";
 import { Outlet } from "react-router-dom";
 
 // @TYPES
-import { DrawerRoute } from "../../@types";
+import { DrawerRoute } from "src/@types";
 
 // COMPONENTS
 import {
   AppBar,
   AppFooter,
   AppDrawer,
-} from "../../components/navigation";
+} from "src/components/navigation";
 import {
   FaBox,
   FaReceipt,

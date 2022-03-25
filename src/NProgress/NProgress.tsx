@@ -2,7 +2,7 @@ import { Fragment, useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { SpinnerCircular } from "spinners-react";
 import gsap, { Power2 } from "gsap";
-import { on } from "../Events";
+import { on } from "src/Events";
 
 const timeline = gsap.timeline();
 const nprogressRoot = document.getElementById("nprogress-root") as HTMLElement;

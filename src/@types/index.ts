@@ -2,7 +2,6 @@ import {
   ReactNode,
 } from "react";
 import { IconType } from "react-icons/lib";
-import NoEntity from '../components/core/NoEntity/NoEntity';
 
 export type DrawerRoute = {
   to: string,

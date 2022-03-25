@@ -1,5 +1,5 @@
 import "./CategoryModal.scss";
-import { Modal } from "../../core";
+import { Modal } from "src/components/core";
 import { Fragment, useState } from "react";
 import { IoSearch } from "react-icons/io5";
 

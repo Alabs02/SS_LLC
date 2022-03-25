@@ -1,5 +1,5 @@
 import axios, { AxiosInstance } from "axios";
-import { trigger } from "../Events";
+import { trigger } from "src/Events";
 
 const axiosConfig = {
   withCredentials: false,

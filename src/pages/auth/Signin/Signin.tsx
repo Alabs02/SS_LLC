@@ -9,16 +9,16 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { toast } from "react-toastify";
 
 // COMPONENTS
-import FormField from "../../../components/forms";
-import { ErrorMsg } from "../../../components/errors";
-import { LoadingBtn } from "../../../components/core";
+import FormField from "src/components/forms";
+import { ErrorMsg } from "src/components/errors";
+import { LoadingBtn } from "src/components/core";
 
 // UTILITIES
-import { isSuccessful } from "../../../utils/helpers";
-import { $api, $storage } from "../../../services";
+import { isSuccessful } from "src/utils/helpers";
+import { $api, $storage } from "src/services";
 
 // INTERFACES
-import { IUserPayload } from "../../../interfaces";
+import { IUserPayload } from "src/interfaces";
 
 export type UserPayload = {
   key: string;

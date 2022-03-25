@@ -1,9 +1,9 @@
 import { ReactElement } from "react";
 import { Navigate, useLocation } from "react-router-dom";
-import { $storage } from "../../services";
+import { $storage } from "src/services";
 
 // INTERFACES
-import { IUserPayload } from "../../interfaces";
+import { IUserPayload } from "src/interfaces";
 
 const RequireAuth = ({ children }: { children: ReactElement }) => {
   const location = useLocation();

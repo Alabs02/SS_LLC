@@ -4,8 +4,8 @@ import { Route } from "react-router-dom";
 //LAYOUTS
 
 // PAGES
-import { Home } from "../../pages/main";
-import { FalseTest } from "../../pages/false";
+import { Home } from "src/pages/main";
+import { FalseTest } from "src/pages/false";
 
 
 const MainRoutes = () => {

@@ -7,10 +7,10 @@ import { IoCloseCircleOutline } from "react-icons/io5";
 import "animate.css";
 
 // UTILS
-import { isValidStr } from "../../../utils/helpers";
+import { isValidStr } from "src/utils/helpers";
 
 // INTERFACES
-import { IChildren, ICover } from "../../../interfaces";
+import { IChildren, ICover } from "src/interfaces";
 
 const modalRoot = document.getElementById("modal-root") as HTMLElement;
 

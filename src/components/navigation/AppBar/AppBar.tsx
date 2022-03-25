@@ -5,7 +5,7 @@ import { FC, Fragment } from "react";
 import { IoChevronDown } from "react-icons/io5";
 
 // UTILS
-import { getAuthUser, trimString } from "../../../utils/helpers";
+import { getAuthUser, trimString } from "src/utils/helpers";
 
 const AppBar: FC = () => {
   return (

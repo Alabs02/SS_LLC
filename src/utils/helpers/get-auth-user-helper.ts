@@ -1,8 +1,8 @@
 // UTILS
-import { $storage } from "../../services";
+import { $storage } from "src/services";
 
 // INTERFACES
-import { IUserPayload } from "../../interfaces";
+import { IUserPayload } from "src/interfaces";
 
 // INITIAL STATE
 const userInitialState: IUserPayload = {

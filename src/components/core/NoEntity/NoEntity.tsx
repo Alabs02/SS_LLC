@@ -2,7 +2,7 @@
 import "./NoEntity.scss";
 
 import { Fragment } from "react";
-import { INoEntity } from "../../../@types";
+import { INoEntity } from "src/@types";
 
 type Iprops = INoEntity;
 

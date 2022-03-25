@@ -8,13 +8,13 @@ import { NavLink } from "react-router-dom";
 import { toast } from "react-toastify";
 
 // COMPONENTS
-import FormField from "../../../components/forms";
-import { ErrorMsg } from "../../../components/errors";
-import { LoadingBtn } from "../../../components/core";
+import FormField from "src/components/forms";
+import { ErrorMsg } from "src/components/errors";
+import { LoadingBtn } from "src/components/core";
 
 // HELPERS
-import { $api } from "../../../services";
-import { isSuccessful } from "../../../utils/helpers";
+import { $api } from "src/services";
+import { isSuccessful } from "src/utils/helpers";
 
 const initialFormState = () => {
   return {

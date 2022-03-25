@@ -2,9 +2,9 @@
 import "./Details.scss";
 
 import { FC, Fragment } from "react";
-import { Breadcrumb } from "../../../components/core";
+import { Breadcrumb } from "src/components/core";
 import { FiMoreVertical } from "react-icons/fi";
-import { MobileToolbar } from "../../../components/navigation";
+import { MobileToolbar } from "src/components/navigation";
 
 export const ShipmentItem = () => {
   return (

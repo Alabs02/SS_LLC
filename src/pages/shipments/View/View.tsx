@@ -2,8 +2,8 @@
 import "./View.scss";
 
 import { FC, Fragment, useState } from "react";
-import { NoEntity } from "../../../components/core";
-import { ShipmentToolBar } from "../../../components/navigation";
+import { NoEntity } from "src/components/core";
+import { ShipmentToolBar } from "src/components/navigation";
 import {
   RiArrowLeftSLine,
   RiArrowRightSLine,
@@ -22,7 +22,7 @@ const View: FC = () => {
 
   const renderTableData = () => {
     return shipments.map((shipment, index) => (
-      <tr key={index}>
+      <tr key={index} className="pointer">
         <td>#56483883</td>
         <td>Laptop</td>
         <td>Tobiloba Adekunle</td>
@@ -79,11 +79,11 @@ const View: FC = () => {
               </tr>
             </thead>
             <tbody className="position-relative">
-              { isEmpty && renderTableData()}
+              { !isEmpty && renderTableData()}
             </tbody>
           </table>
           {
-            !isEmpty &&
+            isEmpty &&
             <div className="app-table__noentity">
               <NoEntity
                 imgUrl="/static/no-shipments.svg"
