@@ -1,5 +1,3 @@
-import ErrorMsg from "./ErrorMsg/ErrorMsg";
+import ErrorMsg from './ErrorMsg/ErrorMsg';
 
-export {
-  ErrorMsg,
-};
+export { ErrorMsg };

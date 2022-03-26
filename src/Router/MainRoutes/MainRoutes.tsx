@@ -1,12 +1,11 @@
-import { Fragment } from "react";
-import { Route } from "react-router-dom";
+import { Fragment } from 'react';
+import { Route } from 'react-router-dom';
 
 //LAYOUTS
 
 // PAGES
-import { Home } from "src/pages/main";
-import { FalseTest } from "src/pages/false";
-
+import { Home } from 'src/pages/main';
+import { FalseTest } from 'src/pages/false';
 
 const MainRoutes = () => {
   return (
@@ -15,6 +14,6 @@ const MainRoutes = () => {
       <Route path="/false" element={<FalseTest />}></Route>
     </Fragment>
   );
-}
+};
 
 export default MainRoutes;

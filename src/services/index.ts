@@ -1,8 +1,4 @@
-import $storage from "./localStorageService";
-import $api from "./apiService";
+import $storage from './localStorageService';
+import $api from './apiService';
 
-
-export {
-  $storage,
-  $api,
-}
+export { $storage, $api };

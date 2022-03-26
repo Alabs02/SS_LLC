@@ -1,4 +1,4 @@
-import Crypto from "crypto-js";
+import Crypto from 'crypto-js';
 
 let secretKey = process.env.REACT_APP_SECRET_KEY;
 

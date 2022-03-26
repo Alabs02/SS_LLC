@@ -1,25 +1,25 @@
 // STYLES
-import "./Modal.scss";
+import './Modal.scss';
 
-import React, { Component, Fragment } from "react";
-import { createPortal } from "react-dom";
-import { IoCloseCircleOutline } from "react-icons/io5";
-import "animate.css";
+import React, { Component, Fragment } from 'react';
+import { createPortal } from 'react-dom';
+import { IoCloseCircleOutline } from 'react-icons/io5';
+import 'animate.css';
 
 // UTILS
-import { isValidStr } from "src/utils/helpers";
+import { isValidStr } from 'src/utils/helpers';
 
 // INTERFACES
-import { IChildren, ICover } from "src/interfaces";
+import { IChildren, ICover } from 'src/interfaces';
 
-const modalRoot = document.getElementById("modal-root") as HTMLElement;
+const modalRoot = document.getElementById('modal-root') as HTMLElement;
 
 class Modal extends Component {
   el: HTMLDivElement;
 
   constructor(props: any) {
     super(props);
-    this.el = document.createElement("div");
+    this.el = document.createElement('div');
   }
 
   componentDidMount() {
@@ -38,18 +38,23 @@ class Modal extends Component {
             <div className="app-modal__cover animate__animated animate__zoomIn app-modal__cover-delay round-2">
               <div className="app-modal__header">
                 {isValidStr(props.modalTitle) && (
-                  <div className="app-modal__title justify-content-center fw-medium text-capitalize">{props.modalTitle}</div>
+                  <div className="app-modal__title justify-content-center fw-medium text-capitalize">
+                    {props.modalTitle}
+                  </div>
                 )}
 
                 {props.showCloseBtn && (
                   <div onClick={props.onClose} className="app-modal__close-btn">
-                    <IoCloseCircleOutline fontSize={25} color={"#646464"} className="app-modal__icon" />
+                    <IoCloseCircleOutline
+                      fontSize={25}
+                      color={'#646464'}
+                      className="app-modal__icon"
+                    />
                   </div>
                 )}
               </div>
 
               {props.children}
-
             </div>
           </div>
         </div>
@@ -59,26 +64,18 @@ class Modal extends Component {
 
   static Content = (props: IChildren) => (
     <Fragment>
-      <div className="app-modal__content">
-        {props.children}
-
-      </div>
+      <div className="app-modal__content">{props.children}</div>
     </Fragment>
   );
 
   static Footer = (props: IChildren) => (
     <Fragment>
-      <div className="app-modal__footer">
-        {props.children}
-      </div>
+      <div className="app-modal__footer">{props.children}</div>
     </Fragment>
   );
 
   render() {
-    return createPortal(
-      this.props.children,
-      this.el
-    );
+    return createPortal(this.props.children, this.el);
   }
 }
 

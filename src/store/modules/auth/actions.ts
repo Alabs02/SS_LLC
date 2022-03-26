@@ -1,4 +1,4 @@
-import { SetState } from "zustand";
+import { SetState } from 'zustand';
 
 const actions = (set: SetState<object>) => ({});
 

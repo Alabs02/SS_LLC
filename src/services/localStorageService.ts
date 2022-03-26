@@ -1,7 +1,6 @@
-import Crypt from "./cryptService";
+import Crypt from './cryptService';
 
 class Storage extends Crypt {
-
   getFromStore(key: string) {
     try {
       let payload: any = sessionStorage.getItem(key);
@@ -32,7 +31,6 @@ class Storage extends Crypt {
     }
   }
 
-
   clearStorage() {
     try {
       sessionStorage.clear();
@@ -43,6 +41,5 @@ class Storage extends Crypt {
     }
   }
 }
-
 
 export default new Storage();

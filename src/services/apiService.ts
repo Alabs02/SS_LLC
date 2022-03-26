@@ -1,37 +1,37 @@
-import axios, { AxiosInstance } from "axios";
-import { trigger } from "src/Events";
+import axios, { AxiosInstance } from 'axios';
+import { trigger } from 'src/Events';
 
 const axiosConfig = {
   withCredentials: false,
   headers: {
-    Accept: "application/json"
+    Accept: 'application/json',
   },
-}
+};
 
 const axiosClient: AxiosInstance = axios.create(axiosConfig);
-const isDev = process.env.NODE_ENV === "development";
-
+const isDev = process.env.NODE_ENV === 'development';
 
 class ServiceApi {
-  public url = "";
+  public url = '';
 
   // SELECT BASE URL VERSION
-  service(apiType: string = "auth", userType: string = "staff") {
+  service(apiType: string = 'auth', userType: string = 'staff') {
     isDev
-      ? axiosClient.defaults.baseURL = process.env.REACT_APP_BASE_DEV_URL
-      : axiosClient.defaults.baseURL = process.env.REACT_APP_BASE_PROD_URL;
+      ? (axiosClient.defaults.baseURL = process.env.REACT_APP_BASE_DEV_URL)
+      : (axiosClient.defaults.baseURL = process.env.REACT_APP_BASE_PROD_URL);
 
     this.injectInterceptor();
 
-    this.url = (apiType === "auth" && userType === "staff")
-      ? `authentication-service/staff`
-      : ``;
+    this.url =
+      apiType === 'auth' && userType === 'staff'
+        ? `authentication-service/staff`
+        : ``;
     return this;
   }
 
   // APPEND URL TO API URL
   appendToURL(url: string) {
-    return (`${this.url}${url}`);
+    return `${this.url}${url}`;
   }
 
   // GET API REQUEST
@@ -42,13 +42,18 @@ class ServiceApi {
         this.setupHeaders()
       );
       return resolve ? response?.data : response;
-    } catch(err) {
+    } catch (err) {
       return this.handleErrors(err);
     }
   }
 
   // POST API REQUEST
-  async push(url: string, payload: any = null, resolve = true, is_attached = false) {
+  async push(
+    url: string,
+    payload: any = null,
+    resolve = true,
+    is_attached = false
+  ) {
     try {
       const response = await axiosClient.post(
         this.appendToURL(url),
@@ -57,13 +62,18 @@ class ServiceApi {
       );
 
       return resolve ? response?.data : response;
-    } catch(err) {
+    } catch (err) {
       return this.handleErrors(err);
     }
   }
 
   // PUT API REQUEST
-  async update(url: string, payload: any = {}, resolve = true, is_attached = false) {
+  async update(
+    url: string,
+    payload: any = {},
+    resolve = true,
+    is_attached = false
+  ) {
     try {
       const response = await axiosClient.put(
         this.appendToURL(url),
@@ -72,7 +82,7 @@ class ServiceApi {
       );
 
       return resolve ? response?.data : response;
-    } catch(err) {
+    } catch (err) {
       return this.handleErrors(err);
     }
   }
@@ -80,16 +90,13 @@ class ServiceApi {
   // DELETE API REQUEST
   async remove(url: string, payload: any = {}, resolve = true) {
     try {
-      const response = await axiosClient.delete(
-        this.appendToURL(url),
-        {
-          data: payload,
-          ...this.setupHeaders()
-        }
-      );
+      const response = await axiosClient.delete(this.appendToURL(url), {
+        data: payload,
+        ...this.setupHeaders(),
+      });
 
       return resolve ? response?.data : response;
-    } catch(err) {
+    } catch (err) {
       return this.handleErrors(err);
     }
   }
@@ -99,36 +106,31 @@ class ServiceApi {
     if (is_attached) {
       return {
         headers: {
-          "Content-Type": "multipart/form-data"
-        }
+          'Content-Type': 'multipart/form-data',
+        },
       };
     } else {
       return {
         headers: {
-          "Content-Type": "application/json",
-        }
+          'Content-Type': 'application/json',
+        },
       };
     }
   }
 
   injectInterceptor() {
-    axiosClient.interceptors.request.use(config => {
-      trigger("nProgress:start");
+    axiosClient.interceptors.request.use((config) => {
+      trigger('nProgress:start');
 
       return config;
     });
 
-    axiosClient.interceptors.response.use(response => {
-      trigger("nProgress:end");
+    axiosClient.interceptors.response.use((response) => {
+      trigger('nProgress:end');
 
       return response;
     });
 
-    async (error: any) => {
-      trigger("nProgress:end");
-
-      return Promise.reject(error);
-    }
   }
 
   // HANDLE API REQUEST ERRORS
@@ -139,4 +141,3 @@ class ServiceApi {
 }
 
 export default new ServiceApi();
-

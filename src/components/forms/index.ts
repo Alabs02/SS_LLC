@@ -1,3 +1,3 @@
-import * as FormFields from "./FormFields";
+import * as FormFields from './FormFields';
 
 export default FormFields;

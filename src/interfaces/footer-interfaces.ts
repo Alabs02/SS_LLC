@@ -1,4 +1,4 @@
 export interface AppFooterLink {
-  title: string,
-  to: string,
-};
+  title: string;
+  to: string;
+}

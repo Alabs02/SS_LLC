@@ -1,4 +1,3 @@
-
 function on(eventType: any, listener: any) {
   document.addEventListener(eventType, listener);
 }

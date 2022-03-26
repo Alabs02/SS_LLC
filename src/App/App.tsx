@@ -1,9 +1,7 @@
-import Router from "src/Router";
+import Router from 'src/Router';
 
 const App = (): JSX.Element => {
-  return (
-    <Router />
-  );
-}
+  return <Router />;
+};
 
 export default App;

@@ -1,13 +1,10 @@
-import { Route } from "react-router-dom";
+import { Route } from 'react-router-dom';
 
 // LAYOUT
-import { AuthLayout } from "src/layouts"
+import { AuthLayout } from 'src/layouts';
 
 // PAGES
-import {
-  Signin,
-  ForgotPassword,
-} from  "src/pages/auth";
+import { Signin, ForgotPassword } from 'src/pages/auth';
 
 const AuthRoutes = () => {
   return (
@@ -16,6 +13,6 @@ const AuthRoutes = () => {
       <Route path="forgot-password" element={<ForgotPassword />}></Route>
     </Route>
   );
-}
+};
 
 export default AuthRoutes;

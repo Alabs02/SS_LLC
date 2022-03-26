@@ -1,10 +1,10 @@
-import { GetState } from "zustand";
+import { GetState } from 'zustand';
 
 export type IAuthGet = {
   userPayload: {
     email: string;
     password: string;
-  }
+  };
 };
 
 const getters = (get: GetState<IAuthGet>) => ({

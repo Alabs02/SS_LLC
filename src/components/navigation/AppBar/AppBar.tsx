@@ -1,11 +1,11 @@
 // STYLES
-import "./AppBar.scss";
+import './AppBar.scss';
 
-import { FC, Fragment } from "react";
-import { IoChevronDown } from "react-icons/io5";
+import { FC, Fragment } from 'react';
+import { IoChevronDown } from 'react-icons/io5';
 
 // UTILS
-import { getAuthUser, trimString } from "src/utils/helpers";
+import { getAuthUser, trimString } from 'src/utils/helpers';
 
 const AppBar: FC = () => {
   return (
@@ -27,13 +27,16 @@ const AppBar: FC = () => {
             <div className="dropdown-btn__avatar text-uppercase fw-medium msr-8">
               {trimString(getAuthUser.first_name, 2, false)}
             </div>
-            <div className="fw-medium dropdown-btn__copy msr-12">Hello, <span className="fw-semi-bold">{getAuthUser.first_name}</span></div>
+            <div className="fw-medium dropdown-btn__copy msr-12">
+              Hello,{' '}
+              <span className="fw-semi-bold">{getAuthUser.first_name}</span>
+            </div>
             <IoChevronDown />
           </button>
         </div>
       </div>
     </Fragment>
-  )
-}
+  );
+};
 
 export default AppBar;

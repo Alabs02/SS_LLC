@@ -1,5 +1,3 @@
-import { toFormData } from "./helpers";
+import { toFormData } from './helpers';
 
-export {
-  toFormData,
-};
+export { toFormData };

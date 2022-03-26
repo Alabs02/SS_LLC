@@ -1,11 +1,8 @@
-import { Fragment, FC } from "react";
-import { Outlet } from "react-router-dom";
+import { Fragment, FC } from 'react';
+import { Outlet } from 'react-router-dom';
 
 // COMPONENTS
-import {
-  AppToolBar,
-  AppFooter,
-} from "src/components/navigation";
+import { AppToolBar, AppFooter } from 'src/components/navigation';
 
 const AuthLayout: FC = () => {
   return (
@@ -27,7 +24,7 @@ const AuthLayout: FC = () => {
         </div>
       </div>
     </Fragment>
-  )
-}
+  );
+};
 
-export default AuthLayout
+export default AuthLayout;

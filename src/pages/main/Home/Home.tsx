@@ -1,7 +1,7 @@
 // STYLES
-import "./Home.scss";
+import './Home.scss';
 
-import { Fragment } from "react";
+import { Fragment } from 'react';
 
 const Home = () => {
   return (
@@ -9,6 +9,6 @@ const Home = () => {
       <h3>Home</h3>
     </Fragment>
   );
-}
+};
 
 export default Home;

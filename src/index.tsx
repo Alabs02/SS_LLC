@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import { render as Render } from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import NProgress from './NProgress';
-import Toast from "./components/Toast";
+import Toast from './components/Toast';
 
 // APP
 import App from './App';
@@ -12,9 +12,9 @@ import '@/assets/scss/app.scss';
 
 Render(
   <StrictMode>
-      <App />
-      <Toast />
-      <NProgress />
+    <App />
+    <Toast />
+    <NProgress />
   </StrictMode>,
   document.getElementById('app-root')
 );

@@ -1,8 +1,8 @@
-import { SetState, GetState } from "zustand";
-import actions from "./actions";
-import getters from "./getters";
-import mutations from "./mutations";
-import state from "./state";
+import { SetState, GetState } from 'zustand';
+import actions from './actions';
+import getters from './getters';
+import mutations from './mutations';
+import state from './state';
 
 const authModule = (set: SetState<any>, get: GetState<any>) => ({
   ...state,

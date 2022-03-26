@@ -1,3 +1,3 @@
-import NProgress from "./NProgress";
+import NProgress from './NProgress';
 
 export default NProgress;

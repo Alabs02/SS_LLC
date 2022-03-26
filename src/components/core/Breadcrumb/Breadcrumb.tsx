@@ -1,41 +1,46 @@
 // STYLES
-import "./Breadcrumb.scss";
+import './Breadcrumb.scss';
 
-import { Fragment } from "react";
-import { RiArrowRightSLine } from "react-icons/ri";
-import { NavLink } from "react-router-dom";
-import { IBreadcrumbItem } from "src/@types";
+import { Fragment } from 'react';
+import { RiArrowRightSLine } from 'react-icons/ri';
+import { NavLink } from 'react-router-dom';
+import { IBreadcrumbItem } from 'src/interfaces';
 
 export type IBreadcrumbItems = Array<IBreadcrumbItem>;
 
 export const Divider = () => {
-  return (
-    <RiArrowRightSLine className="app-breadcrumb__divider" />
-  );
-}
+  return <RiArrowRightSLine className="app-breadcrumb__divider" />;
+};
 
 export const BreadcrumbItem = ({ to, title }: IBreadcrumbItem) => {
   return (
-    <NavLink key={`${to}${title}`} to={to} className={
-      ({ isActive }) => isActive
-        ? "app-breadcrumb__link--active"
-        : "app-breadcrumb__link--inactive"
-    }>
+    <NavLink
+      key={`${to}${title}`}
+      to={to}
+      className={({ isActive }) =>
+        isActive
+          ? 'app-breadcrumb__link--active'
+          : 'app-breadcrumb__link--inactive'
+      }
+    >
       <li className="app-breadcrumb__item fw-semi-bold lh-20">{title}</li>
     </NavLink>
   );
-}
+};
 
-const Breadcrumb = ({ breadcrumbItems }: { breadcrumbItems: IBreadcrumbItems }) => {
-
+const Breadcrumb = ({
+  breadcrumbItems,
+}: {
+  breadcrumbItems: IBreadcrumbItems;
+}) => {
   const renderBreadcrumbItems = () => {
     return breadcrumbItems.map((item, index) => (
       <div className="d-flex align-items-center" key={index}>
         <BreadcrumbItem key={index} {...item} />
-        { (index+1 !== breadcrumbItems.length) && <Divider />}
+        {index + 1 !== breadcrumbItems.length && <Divider />}
       </div>
     ));
-  }
+  };
 
   return (
     <Fragment>
@@ -45,7 +50,7 @@ const Breadcrumb = ({ breadcrumbItems }: { breadcrumbItems: IBreadcrumbItems }) 
         </ul>
       </nav>
     </Fragment>
-  )
-}
+  );
+};
 
 export default Breadcrumb;

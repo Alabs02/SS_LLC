@@ -1,8 +1,8 @@
-import { SetState } from "zustand";
+import { SetState } from 'zustand';
 
-export type IState  = {
+export type IState = {
   userPayload: () => {};
-}
+};
 
 const mutations = (set: SetState<object>) => ({
   // setUserPayload: (payload: any) => set(state => { userPayload: [...state.userPayload, payload] }),

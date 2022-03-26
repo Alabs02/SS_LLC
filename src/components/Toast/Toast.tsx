@@ -1,5 +1,5 @@
-import { Fragment } from "react";
-import { ToastContainer } from "react-toastify";
+import { Fragment } from 'react';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Toast = () => {
@@ -18,6 +18,6 @@ const Toast = () => {
       />
     </Fragment>
   );
-}
+};
 
 export default Toast;

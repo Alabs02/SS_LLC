@@ -1,3 +1,3 @@
-import MainRoutes from "./MainRoutes";
+import MainRoutes from './MainRoutes';
 
 export default MainRoutes;
