@@ -1,8 +1,10 @@
 import { Fragment } from 'react';
 import { Breadcrumb } from 'src/components/core';
 import { MobileToolbar } from 'src/components/navigation';
+import { useNavigate } from 'react-router-dom';
 
 const RegisterClient = () => {
+  const navigate = useNavigate();
   const breadcrumbItems = [
     {
       to: '/shipments',
@@ -23,7 +25,8 @@ const RegisterClient = () => {
       <MobileToolbar />
 
       <div className="top-nav">
-        <div className="top-nav__breadcrumb">
+        <div className="visible hide-md" />
+        <div className="top-nav__breadcrumb hide visible-md">
           <Breadcrumb breadcrumbItems={breadcrumbItems} />
         </div>
 
@@ -43,8 +46,8 @@ const RegisterClient = () => {
         </div>
 
         <form className="form msl-24 msr-24 msb-24 mst-0">
-          <div className="grid grid-col-12 gap-x-48 w-full">
-            <div className="col-span-12 col-span-md-6 gap-x-46 msb-24">
+          <div className="grid grid-col-12 gap-x-md-48">
+            <div className="col-span-12 col-span-md-6 gap-x-md-46 msb-24">
               <label
                 htmlFor="client__name"
                 className="form-label ms-0 msb-8 fw-normal ft-13 lh-20 "
@@ -175,7 +178,12 @@ const RegisterClient = () => {
           </div>
 
           <section className="section section--action w-full mst-24 ">
-            <button className="btn btn-tonic btn-lg">Register Client</button>
+            <button
+              onClick={() => navigate('clients/register')}
+              className="btn btn-tonic btn-lg"
+            >
+              Register Client
+            </button>
           </section>
         </form>
       </div>
@@ -183,4 +191,4 @@ const RegisterClient = () => {
   );
 };
 
-export default RegisterClient;
+export { RegisterClient as default };

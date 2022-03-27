@@ -1,12 +1,16 @@
 // STYLES
 import './View.scss';
 
-import { FC, Fragment, useState } from 'react';
+import { Fragment, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+// COMPONENTS
 import { NoEntity } from 'src/components/core';
 import { ShipmentToolBar } from 'src/components/navigation';
 import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri';
 
-const View: FC = () => {
+const View = (): JSX.Element => {
+  const navigate = useNavigate();
   const [shipments, setShipment] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
   const isEmpty = shipments.length === 0;
 
@@ -16,7 +20,7 @@ const View: FC = () => {
 
   const renderTableData = () => {
     return shipments.map((shipment, index) => (
-      <tr key={index} className="pointer">
+      <tr onClick={() => navigate('details/1')} key={index} className="pointer">
         <td>#56483883</td>
         <td>Laptop</td>
         <td>Tobiloba Adekunle</td>
@@ -48,7 +52,7 @@ const View: FC = () => {
             className="search__input fw-medium"
             placeholder="Input Shipment ID"
           />
-          <button className="btn-success-darker search__btn d-grid place-items-center ft-13 fw-medium lh-20">
+          <button onClick={() => navigate('/airway-bill/track-shipment/1')} className="btn-success-darker search__btn d-grid place-items-center ft-13 fw-medium lh-20">
             Track
           </button>
         </div>
@@ -124,4 +128,4 @@ const View: FC = () => {
   );
 };
 
-export default View;
+export { View as default };

@@ -1,38 +1,37 @@
 // STYLES
 import './SuccessModal.scss';
-import { Modal } from 'src/components/core';
-import { Fragment, useState } from 'react';
 
-const SuccessModal = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const SuccessMsg = 'Recipient record has been created successfully.';
+import { Fragment, Dispatch, SetStateAction } from 'react';
+import { Modal } from 'src/components/core';
+
+// ICONS
+import { CheckSuccessIcon } from 'src/assets/icons';
+
+interface IProps {
+  isOpen: boolean;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
+  copy?: string;
+}
+
+const SuccessModal = ({ isOpen, setIsOpen, copy }: IProps): JSX.Element => {
   return (
     <Fragment>
       <Modal>
         <Modal.Cover
           isOpen={isOpen}
           showCloseBtn={true}
+          variant={'sm'}
           onClose={() => setIsOpen(false)}
         >
-          <Modal.Content>
-            <div className="justify-content-center">
-              <img src="/static/success.svg" alt="success" />
-            </div>
-            <div className="justify-content-center">
-              <p className="mst-16 fw-normal ft-16 lh-22">{SuccessMsg}</p>
+          <Modal.Content variant={'sm'}>
+            <div className="success-modal">
+              <CheckSuccessIcon />
+
+              <div className="success-modal__copy mst-16 ft-16 lh-24 msb-40">{copy && copy}</div>
             </div>
           </Modal.Content>
         </Modal.Cover>
       </Modal>
-      <div className="grid place-items-center w-full h-full">
-        <h4 className="mst-50">Success Modal One</h4>
-        <button
-          onClick={() => setIsOpen(true)}
-          className="btn btn-success text-capitalize"
-        >
-          test modal
-        </button>
-      </div>
     </Fragment>
   );
 };

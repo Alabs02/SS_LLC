@@ -1,7 +1,10 @@
 import { BrowserRouter, Routes } from 'react-router-dom';
-import ShipmentRoutes from './ShipmentRoutes';
+
+// ROUTES
 import AuthRoutes from './AuthRoutes';
 import MainRoutes from './MainRoutes';
+import ShipmentRoutes from './ShipmentRoutes';
+import RecipientRoutes from './RecipientRoutes';
 
 const Router = () => {
   return (
@@ -10,9 +13,10 @@ const Router = () => {
         {ShipmentRoutes()} {/* SHIPMENT ROUTES */}
         {AuthRoutes()} {/* AUTH ROUTES */}
         {MainRoutes()} {/*  MAIN ROUTES */}
+        {RecipientRoutes()} {/* RECIPIENT ROUTES */}
       </Routes>
     </BrowserRouter>
   );
 };
 
-export default Router;
+export { Router as default };

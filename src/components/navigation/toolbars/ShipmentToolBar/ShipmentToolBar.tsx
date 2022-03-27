@@ -17,7 +17,7 @@ const ShipmentToolBar: FC = () => {
             <img src="/static/logo.svg" alt="brand-logo" />
           </div>
         </div>
-        <NavLink to="">
+        <NavLink to="clients">
           <button className="btn btn-tonic">Create a new shipment</button>
         </NavLink>
       </div>

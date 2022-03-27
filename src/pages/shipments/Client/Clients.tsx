@@ -5,7 +5,9 @@ import { Fragment, useEffect } from 'react';
 import { RiSearchLine } from 'react-icons/ri';
 import useStore from 'src/store';
 
+// COMPONENTS
 import { ClientCard, Breadcrumb } from 'src/components/core';
+import { MobileToolbar } from 'src/components/navigation';
 import { NavLink } from 'react-router-dom';
 
 export type IState = {
@@ -36,8 +38,11 @@ const Clients = () => {
 
   return (
     <Fragment>
+      <MobileToolbar />
+
       <div className="top-nav">
-        <div className="top-nav__breadcrumb">
+        <div className="visible hide-md" />
+        <div className="top-nav__breadcrumb hide visible-md">
           <Breadcrumb breadcrumbItems={breadcrumbItems} />
         </div>
         <div className="top-nav__actions">
@@ -55,7 +60,7 @@ const Clients = () => {
       </div>
 
       <section className="section section--searchbar msb-24 w-full">
-        <div className="searchbar msr-8">
+        <div className="searchbar msr-md-8">
           <input
             type="text"
             className="form-control searchbar__input"
@@ -67,7 +72,9 @@ const Clients = () => {
           />
         </div>
 
-        <button className="btn btn-tonic-light searchbar__btn">Search</button>
+        <button className="btn btn-tonic-light searchbar__btn mst-10  mst-md-0">
+          Search
+        </button>
       </section>
 
       <div className="mst-24 msb-12 fw-medium app-text-primary text-capitalize ft-18 lh-26">
@@ -75,8 +82,17 @@ const Clients = () => {
       </div>
 
       <section className="section section--clients w-full">
-        <div className="grid grid-col-12 w-full">
-          <div className="col-span-6">
+        <div className="grid grid-col-12 gap-x-30 gap-y-32 w-full">
+          <div className="col-span-12 col-span-md-6">
+            <ClientCard />
+          </div>
+          <div className="col-span-12 col-span-md-6">
+            <ClientCard />
+          </div>
+          <div className="col-span-12 col-span-md-6">
+            <ClientCard />
+          </div>
+          <div className="col-span-12 col-span-md-6">
             <ClientCard />
           </div>
         </div>
@@ -93,4 +109,4 @@ const Clients = () => {
   );
 };
 
-export default Clients;
+export { Clients as default };

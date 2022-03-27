@@ -62,9 +62,29 @@ input {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 .visible {
-  display: block;
+  display: block !important;
+}
+
+@include breakpoint-up(md) {
+  .hide-md {
+    display: none !important;
+  }
+
+  .visible-md {
+    display: block !important;
+  }
+}
+
+@include breakpoint-up(lg) {
+  .hide-lg {
+    display: none !important;
+  }
+
+  .visible-lg {
+    display: block !important;
+  }
 }

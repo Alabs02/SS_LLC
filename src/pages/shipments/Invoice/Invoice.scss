@@ -1,0 +1,24 @@
+.invoice-card {
+  border-width: 0px !important;
+
+  &__transparent {
+    color: transparent !important;
+  }
+
+  &_border {
+    border-top: 1px solid $brand-secondary-light;
+  }
+
+  &__tfoot {
+    width: 11.5%;
+  }
+}
+
+@include breakpoint-up(md) {
+  .invoice-card {
+    &_border {
+      border-top-width: 0px;
+      border-left: 1px solid $brand-secondary-light;
+    }
+  }
+}

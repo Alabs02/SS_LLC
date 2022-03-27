@@ -1,10 +1,11 @@
 // STYLES
 import './Details.scss';
 
-import { FC, Fragment } from 'react';
+import { Fragment } from 'react';
 import { Breadcrumb } from 'src/components/core';
 import { FiMoreVertical } from 'react-icons/fi';
 import { MobileToolbar } from 'src/components/navigation';
+import { useNavigate } from 'react-router-dom';
 
 export const ShipmentItem = () => {
   return (
@@ -73,7 +74,8 @@ export const ShipmentItem = () => {
   );
 };
 
-const Details: FC = () => {
+const Details = (): JSX.Element => {
+  const navigate = useNavigate();
   const breadcrumbItems = [
     {
       to: '/shipments',
@@ -101,10 +103,10 @@ const Details: FC = () => {
         </div>
 
         <div className="d-flex align-items-center msb-20 msb-md-0">
-          <button className="btn btn-sm app-bg-white btn-white-outline psy-8 psx-17 msr-16 w-full w-md-auto">
+          <button onClick={() => navigate('invoice')} className="btn btn-sm app-bg-white btn-white-outline psy-8 psx-17 msr-16 w-full w-md-auto">
             Generate Invoice
           </button>
-          <button className="btn btn-sm btn-success psy-8 psx-24 w-full w-md-auto">
+          <button onClick={() => navigate('track-shipment')} type={'button'} className="btn btn-sm btn-success psy-8 psx-24 w-full w-md-auto">
             Track shipment
           </button>
         </div>
@@ -271,4 +273,4 @@ const Details: FC = () => {
   );
 };
 
-export default Details;
+export { Details as default };

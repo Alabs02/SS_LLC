@@ -165,6 +165,11 @@
         }
       }
     }
+
+    tfoot {
+      width: 100%;
+      height: auto;
+    }
   }
 
   &__noentity {
@@ -172,6 +177,13 @@
     height: auto;
     background: $brand-white;
     @include boxShadow(default, #000);
+  }
+
+  &__tfoot {
+    width: 100%;
+    min-height: toRem(56);
+    padding: toRem(14) toRem(16);
+    background: $brand-white;
   }
 }
 

@@ -7,6 +7,11 @@
   left: 0;
   z-index: 90;
 
+  &__stick {
+    position: sticky;
+    top: 0;
+  }
+
   &__overlay {
     width: 100%;
     height: 100%;
@@ -18,58 +23,60 @@
 
   &__cover {
     background: #fff;
-    overflow-x: hidden;
+    overflow: hidden;
     overflow-y: auto;
     position: relative;
 
+    @include gray-scrollbar();
+
     &-delay {
-      animation-delay: 0.2s !important;
+      animation-delay: 0.3s !important;
     }
   }
 
   &--auto {
     .app-modal__cover {
-      max-width: 100%;
-      max-height: 100%;
+      max-width: 90%;
+      max-height: 90vh;
     }
   }
 
   &--sm {
     .app-modal__cover {
-      width: 35%;
-      min-height: 35%;
-      max-height: 40%;
+      width: 90%;
+      min-height: 35vh;
+      max-height: 40vh;
     }
   }
 
   &--md {
     .app-modal__cover {
-      width: 50%;
-      min-height: 50%;
-      max-height: 60%;
+      width: 90%;
+      min-height: 50vh;
+      max-height: 60vh;
     }
   }
 
   &--lg {
     .app-modal__cover {
-      width: 70%;
-      min-height: 70%;
-      max-height: 80%;
+      width: 90%;
+      min-height: 70vh;
+      max-height: 80vh;
     }
   }
 
   &--full {
     .app-modal__cover {
       width: 100%;
-      min-height: 100%;
-      max-height: 100%;
+      min-height: 100vh;
+      max-height: 100vh;
     }
   }
 
   &__header {
     width: 100%;
     position: relative;
-    height: toRem(45);
+    height: toRem(50);
     padding: 0 toRem(20);
 
     display: flex;
@@ -99,16 +106,41 @@
 
   &__content {
     width: 100%;
-    height: auto;
-    padding: toRem(20);
 
     display: grid;
     place-items: center;
+
+    overflow: hidden;
+    overflow-y: auto;
+
+    @include gray-scrollbar();
+
+    &--sm {
+      min-height: calc(35vh - 80px);
+      max-height: calc(40vh - 80px);
+    }
+
+    &--md {
+      min-height: calc(50vh - 170px);
+      max-height: calc(60vh - 170px);
+    }
+
+    &--lg {
+      min-height: calc(70vh - 170px);
+      max-height: calc(80vh - 170px);
+    }
+
+    &--full {
+      min-height: calc(100vh - 170px);
+      max-height: calc(100vh - 170px);
+    }
   }
 
   &__footer {
     width: 100%;
+    height: toRem(80);
     padding: toRem(20) toRem(20);
+    background: inherit;
 
     display: flex;
     place-items: center;
@@ -117,5 +149,42 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: 20;
+  }
+}
+
+@include breakpoint-up(md) {
+  .app-modal {
+    &--sm {
+      .app-modal__cover {
+        width: 35%;
+        min-height: 35vh;
+        max-height: 40vh;
+      }
+    }
+
+    &--md {
+      .app-modal__cover {
+        width: 50%;
+        min-height: 50vh;
+        max-height: 60vh;
+      }
+    }
+
+    &--lg {
+      .app-modal__cover {
+        width: 70%;
+        min-height: 70vh;
+        max-height: 80vh;
+      }
+    }
+
+    &--full {
+      .app-modal__cover {
+        width: 100%;
+        min-height: 100vh;
+        max-height: 100vh;
+      }
+    }
   }
 }

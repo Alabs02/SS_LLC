@@ -5,8 +5,13 @@ export interface IChildren {
 }
 
 export interface ICover extends IChildren {
+  onClose?: () => void | any;
   showCloseBtn: boolean;
   isOpen: boolean;
   modalTitle?: string;
-  onClose?: () => void | any;
+  variant: 'auto' | 'sm' | 'md' | 'lg' | 'full';
+}
+
+export interface IContent extends IChildren {
+  variant?: 'auto' | 'sm' | 'md' | 'lg' | 'full';
 }

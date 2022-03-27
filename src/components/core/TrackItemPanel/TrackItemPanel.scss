@@ -1,0 +1,23 @@
+.track-panel {
+  width: 100%;
+
+  display: grid;
+  align-items: center;
+
+  &__header {
+    width: 100%;
+    height: toRem(40);
+    color: $brand-primary;
+    background: $brand-primary-light;
+  }
+
+  &__content {
+    &-item {
+      color: $color-dark;
+
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}

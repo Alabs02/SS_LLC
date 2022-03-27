@@ -17,7 +17,7 @@
 }
 
 .searchbar {
-  width: 60%;
+  width: 100%;
   height: toRem(48);
   position: relative;
 
@@ -39,6 +39,7 @@
 
   &__btn {
     height: toRem(48) !important;
+    width: 100%;
     padding-right: toRem(30) !important;
     padding-left: toRem(30) !important;
   }
@@ -47,11 +48,49 @@
 .section {
   &--searchbar {
     display: flex;
+    flex-direction: column;
     align-items: center;
   }
 
   &--action {
     display: flex;
     justify-content: center;
+    margin-bottom: toRem(50);
+  }
+}
+
+@include breakpoint-up(md) {
+  .searchbar {
+    width: 60%;
+    height: toRem(48);
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    &__input {
+      height: 100%;
+      border-radius: 0 !important;
+    }
+
+    &__icon {
+      position: absolute;
+      top: 50%;
+      right: toRem(16);
+
+      transform: translateY(-50%);
+    }
+
+    &__btn {
+      width: auto;
+      padding-right: toRem(40) !important;
+      padding-left: toRem(40) !important;
+    }
+  }
+
+  .section {
+    &--searchbar {
+      flex-direction: row;
+    }
   }
 }

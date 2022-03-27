@@ -9,9 +9,10 @@ const FalseTest = () => {
         <Modal.Cover
           isOpen={isOpen}
           showCloseBtn={true}
+          variant={'md'}
           onClose={() => setIsOpen(false)}
         >
-          <Modal.Content>
+          <Modal.Content variant={'md'}>
             <div>
               <h1>Hello</h1>
             </div>

@@ -1,0 +1,13 @@
+.track-shipment {
+  &__bar {
+    width: 100%;
+  }
+}
+
+@include breakpoint-up(md) {
+  .track-shipment {
+    &__bar {
+      width: 70%;
+    }
+  }
+}

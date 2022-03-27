@@ -1,0 +1,96 @@
+.tracking-bar {
+  width: 100%;
+  position: relative;
+  @include flex-center-between();
+
+  &__bar {
+    &--active::before {
+      background-color: #C3E1C3;
+    }
+
+    &--inactive::before {
+      background-color: $brand-gray-light;
+    }
+
+    &--inactive::after {
+      background: linear-gradient(90deg, #C3E1C3 2.5%, #F4F4F4 98.57%);
+    }
+  }
+
+  &__item {
+    width: toRem(45);
+    height: toRem(45);
+    padding: toRem(12);
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+    z-index: 3;
+
+    &-inner {
+      width: toRem(23);
+      height: toRem(23);
+      border-radius: 50%;
+
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  &--inactive {
+    background: $brand-gray-light;
+
+    &-dark {
+      background: #969696;
+    }
+  }
+
+  &--active {
+    background: #C3E1C3;
+
+    &-dark {
+      background: $brand-success-dark;
+    }
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+
+    width: 100%;
+    height: toRem(8);
+  }
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    transform: translateY(-50%);
+
+    width: 100%;
+    height: toRem(8);
+  }
+}
+
+@include breakpoint-up(md) {
+  .tracking-bar {
+    &__item {
+      width: toRem(72);
+      height: toRem(72);
+      padding: toRem(18);
+
+      &-inner {
+        width: toRem(36);
+        height: toRem(36);
+      }
+    }
+  }
+}

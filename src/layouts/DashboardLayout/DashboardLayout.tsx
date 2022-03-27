@@ -6,12 +6,16 @@ import { DrawerRoute } from 'src/interfaces';
 
 // COMPONENTS
 import { AppBar, AppFooter, AppDrawer } from 'src/components/navigation';
-import { FaBox, FaReceipt, FaFileInvoice } from 'react-icons/fa';
-import { HiUserGroup } from 'react-icons/hi';
+import { FaBox, FaUserCog, FaFileInvoice, FaFileAlt } from 'react-icons/fa';
 import { IoSettingsSharp } from 'react-icons/io5';
 
 const DashboardLayout: FC = () => {
   const drawerRoutes: DrawerRoute[] = [
+    {
+      to: '/airway-bill/track-shipment/1',
+      title: 'Airway Bill',
+      icon: FaFileAlt,
+    },
     {
       to: '/shipments',
       title: 'Shipments',
@@ -19,21 +23,15 @@ const DashboardLayout: FC = () => {
     },
 
     {
-      to: '/recipients',
-      title: 'Recipients',
-      icon: HiUserGroup,
-    },
-
-    {
-      to: '/quotes',
-      title: 'Quotes',
+      to: '/accounting',
+      title: 'Accounting',
       icon: FaFileInvoice,
     },
 
     {
-      to: '/invoices',
-      title: 'Invoices',
-      icon: FaReceipt,
+      to: '/administration',
+      title: 'Administration',
+      icon: FaUserCog,
     },
 
     {
