@@ -60,4 +60,27 @@
       background: $brand-tonic-lighter;
     }
   }
+
+  &__circle-trash {
+    cursor: pointer;
+    width: auto;
+    height: toRem(36);
+    border-radius: 50%;
+    background: $brand-tonic-lighter;
+
+
+    display: grid;
+    place-items: center;
+
+    position: absolute;
+    top: toRem(20);
+    right: toRem(20);
+    transition: 0.3s transform ease-in-out;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+      @include boxShadow(sm, #000);
+    }
+  }
 }

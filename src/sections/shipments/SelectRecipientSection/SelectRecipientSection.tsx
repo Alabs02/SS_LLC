@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
 
 // COMPONENTS
-import { ClientCard } from 'src/components/core';
+import { RecipientCard } from 'src/components/core';
 
 
 const SelectRecipientSection = () => {
@@ -11,16 +11,16 @@ const SelectRecipientSection = () => {
       <section className="section section--clients w-full">
         <div className="grid grid-col-12 gap-x-30 gap-y-32 w-full">
           <div className="col-span-12 col-span-md-6">
-            <ClientCard />
+            <RecipientCard />
           </div>
           <div className="col-span-12 col-span-md-6">
-            <ClientCard />
+            <RecipientCard />
           </div>
           <div className="col-span-12 col-span-md-6">
-            <ClientCard />
+            <RecipientCard />
           </div>
           <div className="col-span-12 col-span-md-6">
-            <ClientCard />
+            <RecipientCard />
           </div>
         </div>
       </section>
