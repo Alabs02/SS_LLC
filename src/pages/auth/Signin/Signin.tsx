@@ -33,7 +33,9 @@ const initialFormState = () => {
 };
 
 const formSchema = yupObject().shape({
-  email: string().email('Invalid Email Address').required('Email is Required'),
+  email: string()
+    .email('Invalid Email Address')
+    .required('Email is Required'),
   password: string().required('Password is required'),
 });
 
