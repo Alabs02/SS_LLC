@@ -12,6 +12,7 @@ import {
   EditClient,
   TrackShipment,
   Invoice,
+  CreateShipment,
 } from 'src/pages/shipments';
 
 // AUTH MIDDLEWARE
@@ -39,6 +40,7 @@ const ShipmentRoutes = () => {
       <Route path="clients/edit/:clientId" element={<EditClient />}></Route>
       <Route path="false" element={<FalseTest />}></Route>
       <Route path="add-item" element={<AddItems />}></Route>
+      <Route path="create-shipment" element={<CreateShipment />}></Route>
     </Route>
   );
 };

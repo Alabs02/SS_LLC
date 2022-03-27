@@ -3,7 +3,7 @@ import './Clients.scss';
 
 import { Fragment, useEffect } from 'react';
 import { RiSearchLine } from 'react-icons/ri';
-import useStore from 'src/store';
+// import useStore from 'src/store';
 
 // COMPONENTS
 import { ClientCard, Breadcrumb } from 'src/components/core';
@@ -15,16 +15,6 @@ export type IState = {
 };
 
 const Clients = () => {
-  let test = {};
-  useStore((state) => {
-    test = { ...state };
-  });
-
-  // console.table(test });
-
-  // useEffect(() => {
-  // }, []);
-
   const breadcrumbItems = [
     {
       to: '/shipments',

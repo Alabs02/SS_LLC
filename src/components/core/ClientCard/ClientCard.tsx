@@ -27,7 +27,7 @@ const ClientCard = (): JSX.Element => {
         </div>
 
         <button
-          onClick={() => navigate('/create-shipment')}
+          onClick={() => navigate('/shipments/create-shipment')}
           className="client-card__circle"
         >
           <RiArrowRightSLine color={'#0c0f0a'} size={22} />

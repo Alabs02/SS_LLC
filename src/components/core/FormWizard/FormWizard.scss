@@ -1,0 +1,83 @@
+.form-wizard {
+  width: 100%;
+  height: auto;
+
+  display: grid;
+  place-items: center;
+
+  &__panel {
+    width: 100%;
+    flex-wrap: wrap;
+
+    @include flex-center-between();
+  }
+
+  &__item {
+    width: 50%;
+    cursor: pointer;
+    border: 1px solid transparent;
+
+    display: grid;
+    place-items: center;
+
+    &:hover,
+    &:focus {
+      background: $brand-white;
+      border-color: $brand-primary;
+    }
+
+    &--active {
+      background: $brand-primary-light;
+    }
+
+    &--inactive {
+      background: $brand-gray-light;
+    }
+
+    &-circle {
+      width: toRem(48);
+      height: toRem(48);
+      border-radius: 50%;
+
+      display: grid;
+      place-items: center;
+    }
+
+    &-icon {
+      &--active {
+        color: $brand-primary;
+      }
+
+      &--inactive {
+        color: $brand-gray-dark;
+      }
+    }
+
+    &-title {
+      &--active {
+        color: $brand-primary;
+      }
+
+      &--inactive {
+        color: $color-dark;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@include breakpoint-up(md) {
+  .form-wizard {
+    &__panel {
+      width: 70%;
+    }
+
+    &__item {
+      width: 25%;
+    }
+  }
+}

@@ -6,3 +6,4 @@ export { default as LoadingBtn } from './LoadingBtn/LoadingBtn';
 export { default as TrackingBar } from './TrackingBar/TrackingBar';
 export { default as TrackItemPanel } from './TrackItemPanel/TrackItemPanel';
 export { default as FalseTrackingBar } from './FalseTrackingBar/FalseTrackingBar';
+export { default as FormWizard } from './FormWizard/FormWizard';
