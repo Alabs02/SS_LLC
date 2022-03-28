@@ -7,6 +7,7 @@ import { object as yupObject, string } from 'yup';
 import { Formik, Form, Field } from 'formik';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import Cookies from 'js-cookie'
 
 // COMPONENTS
 import FormField from 'src/components/forms';
@@ -48,6 +49,13 @@ const Signin = () => {
       .service('auth', 'staff')
       .push('/auth/login', values, false);
 
+    const cookieConfig = {
+      path: '/',
+      expires: 7,
+      secure: true,
+      domain: 'localhost',
+    };
+
     console.log({ response });
 
     if (isSuccessful(response?.status)) {
@@ -56,9 +64,11 @@ const Signin = () => {
         isLoggedIn: true,
       };
 
+      Cookies.set('set-cookie', 'value', cookieConfig);
+
       let status = $storage.pushToStore('userPayload', payload);
       status &&
-        navigate('/shipments', { replace: true, state: { isLoggedIn: true } });
+        // navigate('/shipments', { replace: true, state: { isLoggedIn: true } });
       status && toast.success('You have successfully signed in');
     } else {
       toast.error('Authentication Failed', {

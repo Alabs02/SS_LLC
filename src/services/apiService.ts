@@ -121,12 +121,14 @@ class ServiceApi {
   injectInterceptor() {
     axiosClient.interceptors.request.use((config) => {
       trigger('nProgress:start');
+      // console.log({ config });
 
       return config;
     });
 
     axiosClient.interceptors.response.use((response) => {
       trigger('nProgress:end');
+      // console.log({ 'Service response:': response.headers['set-cookie'] });
 
       return response;
     });
