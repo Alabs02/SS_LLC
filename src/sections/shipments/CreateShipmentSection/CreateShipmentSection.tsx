@@ -168,7 +168,7 @@ const CreateShipmentSection = () => {
 
             <div className="w-100 mst-54 grid place-items-center">
               <div className="d-flex flex-column align-items-center msb-24">
-                <div className="msr-md-24 msb-16 msb-md-0">
+                <div className="msb-16 msb-md-0">
                   <input type="checkbox" name="" className="ps-10 msr-16" />
                   <span className="fw-normal ft-16 lh-24">
                     I require packaging for my shipment
