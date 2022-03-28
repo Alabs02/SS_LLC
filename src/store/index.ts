@@ -1,18 +1,15 @@
-import createStore, { SetState, GetState } from 'zustand';
-import { devtools, persist } from 'zustand/middleware';
+import { configureStore, Action } from '@reduxjs/toolkit'
+import { useDispatch } from 'react-redux'
+import { ThunkAction } from 'redux-thunk'
 
-// MODULES
-import { authModule } from './modules';
+import rootReducer, { RootState } from './rootReducer'
 
-const store = devtools((set: SetState<object>, get: GetState<object>) => ({
-  ...authModule(set, get),
-}));
+const store = configureStore({
+    reducer: rootReducer,
+})
 
-const storePersist = persist(store, {
-  name: 'ssaf-llc-storage',
-  getStorage: () => sessionStorage,
-});
+export type AppDispatch = typeof store.dispatch
+export const useAppDispatch = () => useDispatch()
+export type AppThunk = ThunkAction<void, RootState, unknown, Action>
 
-const useStore = createStore(storePersist);
-
-export default useStore;
+export default store
