@@ -10,7 +10,7 @@ interface Item {
 
 interface TrackItem {
   date: string;
-  items: Array<Item>
+  items: Array<Item>;
 }
 
 interface IProps {
@@ -18,7 +18,6 @@ interface IProps {
 }
 
 const TrackItemPanel = ({ item }: IProps) => {
-
   const renderItems = (items: Array<Item>) => {
     return items.map((_item, index) => (
       <div key={index} className="track-panel__content-item ft-16 lh-24 msb-16">
@@ -40,6 +39,6 @@ const TrackItemPanel = ({ item }: IProps) => {
       </div>
     </Fragment>
   );
-}
+};
 
 export { TrackItemPanel as default };

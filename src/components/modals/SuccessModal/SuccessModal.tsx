@@ -27,7 +27,9 @@ const SuccessModal = ({ isOpen, setIsOpen, copy }: IProps): JSX.Element => {
             <div className="success-modal">
               <CheckSuccessIcon />
 
-              <div className="success-modal__copy mst-16 ft-16 lh-24 msb-40">{copy && copy}</div>
+              <div className="success-modal__copy mst-16 ft-16 lh-24 msb-40">
+                {copy && copy}
+              </div>
             </div>
           </Modal.Content>
         </Modal.Cover>

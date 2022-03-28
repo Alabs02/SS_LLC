@@ -30,43 +30,43 @@ const TrackShipment = () => {
       items: [
         {
           time: '6:45pm',
-          description: 'Delivered to SSAF facility'
+          description: 'Delivered to SSAF facility',
         },
         {
           time: '7:34am',
-          description: 'Item in transit for final delivery'
+          description: 'Item in transit for final delivery',
         },
-      ]
+      ],
     },
     {
       date: '19th November, 2021',
       items: [
         {
           time: '6:45pm',
-          description: 'Item in transit'
-        }
-      ]
+          description: 'Item in transit',
+        },
+      ],
     },
     {
       date: '18th November, 2021',
       items: [
         {
           time: '3:18pm',
-          description: 'Left FedEx facility'
+          description: 'Left FedEx facility',
         },
         {
           time: '3:18pm',
-          description: 'Picked up'
+          description: 'Picked up',
         },
-      ]
-    }
+      ],
+    },
   ];
 
   const renderTrackItems = () => {
     return trackingTimestamps.map((item, index) => (
       <TrackItemPanel key={index} item={item} />
     ));
-  }
+  };
 
   return (
     <Fragment>
@@ -92,7 +92,9 @@ const TrackShipment = () => {
       </div>
 
       <div className="d-flex mst-16 justify-content-start">
-        <div className="status fw-normal ft-16 lh-24">Status: <span className="fw-bold">Delivered</span></div>
+        <div className="status fw-normal ft-16 lh-24">
+          Status: <span className="fw-bold">Delivered</span>
+        </div>
         <div className="status__timestamp fw-normal msl-4 mst-5 ft-12 lh-16 app-text-secondary">
           Updated 1 min ago
         </div>
@@ -104,9 +106,7 @@ const TrackShipment = () => {
         </div>
       </div>
 
-      <div className="w-100 msb-100">
-        {renderTrackItems()}
-      </div>
+      <div className="w-100 msb-100">{renderTrackItems()}</div>
     </Fragment>
   );
 };

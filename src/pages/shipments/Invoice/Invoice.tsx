@@ -11,7 +11,6 @@ import { Breadcrumb } from 'src/components/core';
 import { MobileToolbar } from 'src/components/navigation';
 import { NoEntity } from 'src/components/core';
 
-
 const Invoice = () => {
   const breadcrumbItems = [
     {
@@ -24,7 +23,7 @@ const Invoice = () => {
     },
     {
       to: '/shipments/details/1/invoice',
-      title: "Invoice",
+      title: 'Invoice',
     },
   ];
 
@@ -48,38 +47,57 @@ const Invoice = () => {
         </div>
       </div>
 
-      <div className="app-text-primary fw-semi-bold ft-23 lh-32 msy-32">INV-0012</div>
+      <div className="app-text-primary fw-semi-bold ft-23 lh-32 msy-32">
+        INV-0012
+      </div>
 
       <div className="card invoice-card ps-24 msb-36">
         <div className="w-100 grid grid-col-15 gap-x-40 gap-y-30">
-
           <div className="col-span-15 col-span-md-4">
-            <div className="ft-16 lh-24 fw-normal msb-24"><span className="app-text-gray-dark">Billled To:</span> Tobiloba Adekunle</div>
-            <div className="ft-16 lh-24 fw-normal app-text-gray-dark msb-8">Address</div>
-            <div className="ft-16 lh-24 fw-normal">68, XYZ Street, Ikeja, Lagos, Nigeria</div>
+            <div className="ft-16 lh-24 fw-normal msb-24">
+              <span className="app-text-gray-dark">Billled To:</span> Tobiloba
+              Adekunle
+            </div>
+            <div className="ft-16 lh-24 fw-normal app-text-gray-dark msb-8">
+              Address
+            </div>
+            <div className="ft-16 lh-24 fw-normal">
+              68, XYZ Street, Ikeja, Lagos, Nigeria
+            </div>
           </div>
 
           <div className="col-span-15 col-span-md-4">
-            <div className="ft-16 lh-24 fw-normal msb-24"><span className="app-text-gray-dark">Due Date:</span> 30/10/2021</div>
-            <div className="ft-16 lh-24 fw-normal app-text-gray-dark msb-8">Email</div>
-            <div className="ft-16 lh-24 fw-normal">tobilobaadekunle07@gmail.com</div>
+            <div className="ft-16 lh-24 fw-normal msb-24">
+              <span className="app-text-gray-dark">Due Date:</span> 30/10/2021
+            </div>
+            <div className="ft-16 lh-24 fw-normal app-text-gray-dark msb-8">
+              Email
+            </div>
+            <div className="ft-16 lh-24 fw-normal">
+              tobilobaadekunle07@gmail.com
+            </div>
           </div>
 
           <div className="col-span-15 col-span-md-4 d-flex flex-column justify-content-end">
-            <div className="ft-16 lh-24 fw-normal app-text-gray-dark msb-8">Phone</div>
+            <div className="ft-16 lh-24 fw-normal app-text-gray-dark msb-8">
+              Phone
+            </div>
             <div className="ft-16 lh-24 fw-normal">+234 812 432 0028</div>
           </div>
 
           <div className="col-span-15 col-span-md-3 d-flex flex-column align-items-md-end invoice-card_border">
             <div className="pst-30 pst-md-0">
-              <div className="ft-16 lh-24 fw-normal msb-24"><span className="app-text-gray-dark">Invoice No:</span> INV-0012</div>
+              <div className="ft-16 lh-24 fw-normal msb-24">
+                <span className="app-text-gray-dark">Invoice No:</span> INV-0012
+              </div>
               <div className="ft-16 lh-24 fw-normal app-text-gray-dark msb-8 d-flex align-items-center">
                 <span className="msr-8">Status:</span>
-                <div className="badge badge-btn badge-success-outline fw-bold psx-16">Paid</div>
+                <div className="badge badge-btn badge-success-outline fw-bold psx-16">
+                  Paid
+                </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
 
@@ -119,8 +137,12 @@ const Invoice = () => {
           </table>
           <div className="w-100 bg-white">
             <div className="app-table__tfoot d-flex align-items-center justify-content-between">
-              <div className="app-text-primary fw-semi-bold ft-20 lh-28">Total</div>
-              <div className="fw-semi-bold ft-20 lh-28 invoice-card__tfoot">$133.00</div>
+              <div className="app-text-primary fw-semi-bold ft-20 lh-28">
+                Total
+              </div>
+              <div className="fw-semi-bold ft-20 lh-28 invoice-card__tfoot">
+                $133.00
+              </div>
             </div>
           </div>
 
@@ -149,6 +171,6 @@ const Invoice = () => {
       </section>
     </Fragment>
   );
-}
+};
 
 export { Invoice as default };

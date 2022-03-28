@@ -181,7 +181,11 @@ const EditClient = (): JSX.Element => {
               </div>
 
               <section className="section section--action w-full mst-24 ">
-                <button onClick={() => setIsOpen(true)} type="button" className="btn btn-tonic btn-lg">
+                <button
+                  onClick={() => setIsOpen(true)}
+                  type="button"
+                  className="btn btn-tonic btn-lg"
+                >
                   Update Client's Details
                 </button>
               </section>

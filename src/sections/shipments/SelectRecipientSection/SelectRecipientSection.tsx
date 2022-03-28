@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 // COMPONENTS
 import { RecipientCard } from 'src/components/core';
 
-
 const SelectRecipientSection = () => {
   return (
     <Fragment>
@@ -34,6 +33,6 @@ const SelectRecipientSection = () => {
       </section>
     </Fragment>
   );
-}
+};
 
 export { SelectRecipientSection as default };

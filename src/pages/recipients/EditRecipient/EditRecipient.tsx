@@ -52,7 +52,7 @@ const EditRecipient = () => {
             setIsOpen(true);
           }}
         >
-          {props => (
+          {(props) => (
             <Form className="form msl-24 msr-24 msb-24 mst-0">
               <div className="grid grid-col-12 gap-x-md-48 w-full">
                 <div className="col-span-12 col-span-md-6 gap-x-46 msb-24">

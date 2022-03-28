@@ -103,10 +103,17 @@ const Details = (): JSX.Element => {
         </div>
 
         <div className="d-flex align-items-center msb-20 msb-md-0">
-          <button onClick={() => navigate('invoice')} className="btn btn-sm app-bg-white btn-white-outline psy-8 psx-17 msr-16 w-full w-md-auto">
+          <button
+            onClick={() => navigate('invoice')}
+            className="btn btn-sm app-bg-white btn-white-outline psy-8 psx-17 msr-16 w-full w-md-auto"
+          >
             Generate Invoice
           </button>
-          <button onClick={() => navigate('track-shipment')} type={'button'} className="btn btn-sm btn-success psy-8 psx-24 w-full w-md-auto">
+          <button
+            onClick={() => navigate('track-shipment')}
+            type={'button'}
+            className="btn btn-sm btn-success psy-8 psx-24 w-full w-md-auto"
+          >
             Track shipment
           </button>
         </div>

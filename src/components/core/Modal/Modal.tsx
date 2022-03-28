@@ -38,12 +38,17 @@ class Modal extends Component {
       'app-modal--md': props.variant === 'md',
       'app-modal--lg': props.variant === 'lg',
       'app-modal--full': props.variant === 'full',
-    }
+    };
 
     return (
       <Fragment>
         {props.isOpen && (
-          <div className={classnames("app-modal animate__animated animate__fadeIn", coverClassnames)}>
+          <div
+            className={classnames(
+              'app-modal animate__animated animate__fadeIn',
+              coverClassnames
+            )}
+          >
             <div className="app-modal__overlay">
               <div className="app-modal__cover animate__animated animate__zoomIn app-modal__cover-delay round-2">
                 <div className="app-modal__stick w-100">
@@ -55,7 +60,10 @@ class Modal extends Component {
                     )}
 
                     {props.showCloseBtn && (
-                      <div onClick={props.onClose} className="app-modal__close-btn">
+                      <div
+                        onClick={props.onClose}
+                        className="app-modal__close-btn"
+                      >
                         <IoCloseCircleOutline
                           fontSize={25}
                           color={'#646464'}
@@ -89,7 +97,7 @@ class Modal extends Component {
         <div className="app-modal__content">{props.children}</div>
       </Fragment>
     );
-  }
+  };
 
   static Footer = (props: IChildren) => (
     <Fragment>

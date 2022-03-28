@@ -8,7 +8,12 @@ import { Breadcrumb, FormWizard } from 'src/components/core';
 import { MobileToolbar } from 'src/components/navigation';
 
 // SECTION
-import { SelectRecipientSection } from 'src/sections/shipments';
+import {
+  SelectRecipientSection,
+  CreateShipmentSection,
+  ShipmentSummary,
+  AddItemsSection,
+} from 'src/sections/shipments';
 
 const CreateShipment = () => {
   const [selectedTab, setSelectedTab] = useState(1);
@@ -22,31 +27,30 @@ const CreateShipment = () => {
       title: 'Select recipient',
     },
   ];
-
   const tabs = [
     {
       tabID: 1,
       icon: FaUser,
       title: 'Select Recipient',
-      slug: 'select-recipient-tab'
+      slug: 'select-recipient-tab',
     },
     {
       tabID: 2,
       icon: FaBox,
       title: 'Create Shipment',
-      slug: 'create-shipment-tab'
+      slug: 'create-shipment-tab',
     },
     {
       tabID: 3,
       icon: FaBox,
       title: 'Add Items',
-      slug: 'add-items-tab'
+      slug: 'add-items-tab',
     },
     {
       tabID: 4,
       icon: FaFileInvoice,
       title: 'Shipment Summary',
-      slug: 'shipment-summary-tab'
+      slug: 'shipment-summary-tab',
     },
   ];
 
@@ -84,20 +88,20 @@ const CreateShipment = () => {
           </FormWizard.Content>
 
           <FormWizard.Content tabID={2} selectedTab={selectedTab}>
-            <div className="ps-20 w-100">
-              <h4>Create Shipment</h4>
+            <div className="ps-30 w-100">
+              <CreateShipmentSection />
             </div>
           </FormWizard.Content>
 
           <FormWizard.Content tabID={3} selectedTab={selectedTab}>
-            <div className="ps-20 w-100">
-              <h4>Add Item</h4>
+            <div className="ps-30 w-100">
+              <AddItemsSection />
             </div>
           </FormWizard.Content>
 
           <FormWizard.Content tabID={4} selectedTab={selectedTab}>
-            <div className="ps-20 w-100">
-              <h4>Shipment Summary</h4>
+            <div className="ps-30 w-100">
+              <ShipmentSummary />
             </div>
           </FormWizard.Content>
         </FormWizard.Wrapper>

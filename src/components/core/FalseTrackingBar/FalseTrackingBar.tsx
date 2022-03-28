@@ -2,7 +2,6 @@ import { Fragment } from 'react';
 
 import { FaBox, FaTruck, FaCheckCircle } from 'react-icons/fa';
 
-
 const FalseTrackingBar = () => {
   return (
     <Fragment>
@@ -33,6 +32,6 @@ const FalseTrackingBar = () => {
       </div>
     </Fragment>
   );
-}
+};
 
 export { FalseTrackingBar as default };

@@ -52,7 +52,10 @@ const View = (): JSX.Element => {
             className="search__input fw-medium"
             placeholder="Input Shipment ID"
           />
-          <button onClick={() => navigate('/airway-bill/track-shipment/1')} className="btn-success-darker search__btn d-grid place-items-center ft-13 fw-medium lh-20">
+          <button
+            onClick={() => navigate('/airway-bill/track-shipment/1')}
+            className="btn-success-darker search__btn d-grid place-items-center ft-13 fw-medium lh-20"
+          >
             Track
           </button>
         </div>

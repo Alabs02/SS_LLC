@@ -5,7 +5,6 @@ import { Fragment } from 'react';
 
 import { FaBox, FaTruck, FaCheckCircle } from 'react-icons/fa';
 
-
 const TrackingBar = () => {
   return (
     <Fragment>
@@ -30,6 +29,6 @@ const TrackingBar = () => {
       </div>
     </Fragment>
   );
-}
+};
 
 export { TrackingBar as default };

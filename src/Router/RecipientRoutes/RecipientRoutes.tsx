@@ -3,10 +3,7 @@ import { Route } from 'react-router-dom';
 // LAYOUT
 import { DashboardLayout } from 'src/layouts';
 // PAGES
-import {
-  EditRecipient,
-  RegisterRecipient
-} from 'src/pages/recipients';
+import { EditRecipient, RegisterRecipient } from 'src/pages/recipients';
 
 // AUTH MIDDLEWARE
 import { RequireAuth } from 'src/middlewares';

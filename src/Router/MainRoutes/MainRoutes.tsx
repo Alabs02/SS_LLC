@@ -17,11 +17,14 @@ const MainRoutes = () => {
     <Fragment>
       <Route path="/" element={<Home />}></Route>
       <Route path="/false" element={<FalseTest />}></Route>
-      <Route path="/airway-bill/track-shipment/:shipmentId" element={
-        <RequireAuth>
-          <DashboardLayout />
-        </RequireAuth>
-      }>
+      <Route
+        path="/airway-bill/track-shipment/:shipmentId"
+        element={
+          <RequireAuth>
+            <DashboardLayout />
+          </RequireAuth>
+        }
+      >
         <Route path="" element={<AirwayTrackShipment />}></Route>
       </Route>
     </Fragment>
