@@ -84,14 +84,14 @@ const CreateShipmentSection = () => {
                       htmlFor="client__name"
                       className="form-label ms-0 msb-8 fw-normal ft-13 lh-20"
                     >
-                      Dimensions (cm)
+                      Gross Weight (kg)
                     </label>
                     <select
                       name="client__country"
                       id="country"
                       className="w-100 app-form-control"
                     >
-                      <option defaultValue={''}>Select Country</option>
+                      <option defaultValue={''}>60</option>
                     </select>
                   </div>
 
@@ -100,14 +100,14 @@ const CreateShipmentSection = () => {
                       htmlFor="client__name"
                       className="form-label ms-0 msb-8 fw-normal ft-13 lh-20 "
                     >
-                      Dimensions (cm)
+                      Delivery Option
                     </label>
                     <select
                       name="client__country"
                       id="country"
                       className="w-100 app-form-control"
                     >
-                      <option defaultValue={''}>Select Country</option>
+                      <option defaultValue={''}>Parcel - to - door delivery</option>
                     </select>
                   </div>
                 </div>
@@ -120,14 +120,15 @@ const CreateShipmentSection = () => {
                       htmlFor="client__name"
                       className="form-label ms-0 msb-8 fw-normal ft-13 lh-20 "
                     >
-                      Shipment Description
+                      Source Office
                     </label>
-                    <input
-                      type="text"
-                      name="shipment__desc"
-                      className="app-form-control round-0"
-                      placeholder={''}
-                    />
+                    <select
+                      name="client__country"
+                      id="country"
+                      className="w-100 app-form-control"
+                    >
+                      <option defaultValue={''}>Minnesota, U.S.A</option>
+                    </select>
                   </div>
 
                   <div className="col-span-12 col-span-md-6">
@@ -135,14 +136,15 @@ const CreateShipmentSection = () => {
                       htmlFor="client__name"
                       className="form-label ms-0 msb-8 fw-normal ft-13 lh-20 "
                     >
-                      Shipment Description
+                      Destination Office
                     </label>
-                    <input
-                      type="text"
-                      name="shipment__desc"
-                      className="app-form-control round-0"
-                      placeholder={''}
-                    />
+                    <select
+                      name="client__country"
+                      id="country"
+                      className="w-100 app-form-control"
+                    >
+                      <option defaultValue={''}>Ikeja, Lagos, Nigeria</option>
+                    </select>
                   </div>
                 </div>
               </div>
