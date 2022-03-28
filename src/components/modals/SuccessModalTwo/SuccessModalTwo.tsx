@@ -12,6 +12,7 @@ const SuccessModalTwo = () => {
           isOpen={isOpen}
           showCloseBtn={true}
           onClose={() => setIsOpen(false)}
+          variant="sm"
         >
           <Modal.Content>
             <div className="justify-content-center">
