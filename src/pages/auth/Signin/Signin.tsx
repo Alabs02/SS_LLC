@@ -68,7 +68,7 @@ const Signin = () => {
 
       let status = $storage.pushToStore('userPayload', payload);
       status &&
-        // navigate('/shipments', { replace: true, state: { isLoggedIn: true } });
+        navigate('/shipments', { replace: true, state: { isLoggedIn: true } });
       status && toast.success('You have successfully signed in');
     } else {
       toast.error('Authentication Failed', {
